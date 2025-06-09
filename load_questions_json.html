@@ -95,6 +95,11 @@
       color: #2c3e50;
       font-weight: bold;
     }
+    #countdown {
+      font-size: 2em;
+      margin-top: 50px;
+      color: #e74c3c;
+    }
   </style>
 </head>
 <body>
@@ -103,7 +108,8 @@
     <span class="t"> </span><span class="t">t</span><span class="e1">e</span><span class="s2">s</span>
     <span class="m"> </span><span class="m">M</span><span class="a">a</span><span class="t2">t</span><span class="h">h</span><span class="s2">s</span>
   </header>
-  <div id="quiz">
+  <div id="countdown">Le quiz commence dans 5 secondes...</div>
+  <div id="quiz" style="display: none">
     <div id="question"></div>
     <input type="text" id="answer" autocomplete="off">
     <div>Temps: <span id="timer">0.00</span> secondes</div>
@@ -117,25 +123,7 @@
   <script>
     const questions = [
       { q: "Combien font 6*7 ?", a: "42" },
-      { q: "Combien font 8+12 ?", a: "20" },
-      { q: "Combien font 15-3 ?", a: "12" },
-      { q: "Combien font 3*9 ?", a: "27" },
-      { q: "Combien font 100/4 ?", a: "25" },
-      { q: "Combien font 11*11 ?", a: "121" },
-      { q: "Combien font 7+8 ?", a: "15" },
-      { q: "Combien font 45-15 ?", a: "30" },
-      { q: "Combien font 9*5 ?", a: "45" },
-      { q: "Combien font 72/8 ?", a: "9" },
-      { q: "Combien font 6+7 ?", a: "13" },
-      { q: "Combien font 14-6 ?", a: "8" },
-      { q: "Combien font 3*4 ?", a: "12" },
-      { q: "Combien font 80/10 ?", a: "8" },
-      { q: "Combien font 10+10 ?", a: "20" },
-      { q: "Combien font 30-5 ?", a: "25" },
-      { q: "Combien font 6*6 ?", a: "36" },
-      { q: "Combien font 64/8 ?", a: "8" },
-      { q: "Combien font 5+7 ?", a: "12" },
-      { q: "Combien font 18-9 ?", a: "9" }
+      { q: "Combien font 8+12 ?", a: "20" }
     ];
 
     let current = 0;
@@ -228,7 +216,19 @@
       }
     });
 
-    startQuestion();
+    // Compte à rebours avant le début
+    let countdownValue = 5;
+    const countdownElement = document.getElementById("countdown");
+    const countdownInterval = setInterval(() => {
+      countdownElement.innerText = `Le quiz commence dans ${countdownValue} secondes...`;
+      countdownValue--;
+      if (countdownValue < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.style.display = "none";
+        document.getElementById("quiz").style.display = "block";
+        startQuestion();
+      }
+    }, 1000);
   </script>
 </body>
 </html>
