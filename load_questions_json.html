@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Chrono</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffffff;
+    }
+    header {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .logo span {
+      font-family: Verdana, sans-serif;
+      display: inline-block;
+    }
+    .logo .r { color: #e74c3c; }
+    .logo .e1 { color: #f1c40f; }
+    .logo .v { color: #2ecc71; }
+    .logo .i { color: #3498db; }
+    .logo .s { color: #9b59b6; }
+    .logo .e2 { color: #e67e22; }
+    .logo .t { color: #1abc9c; }
+    .logo .m { color: #e84393; }
+    .logo .a { color: #2d98da; }
+    .logo .t2 { color: #fdcb6e; }
+    .logo .h { color: #55efc4; }
+    .logo .s2 { color: #6c5ce7; }
+
+    #quiz {
+      text-align: center;
+    }
+    #question {
+      font-weight: bold;
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+    #answer {
+      display: block;
+      margin: 0 auto 10px auto;
+      padding: 10px;
+      font-size: 1.2em;
+      width: 200px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    #score {
+      margin-top: 15px;
+      font-size: 1.2em;
+    }
+    button {
+      font-size: 1.4em;
+      padding: 20px 40px;
+      margin-top: 10px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+    #summary {
+      max-width: 800px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+    }
+    th {
+      text-align: left;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+    td {
+      padding: 10px;
+    }
+    #resultMessage {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="logo">
+    <span class="r">R</span><span class="e1">e</span><span class="v">v</span><span class="i">i</span><span class="s">s</span><span class="e2">e</span>
+    <span class="t"> </span><span class="t">t</span><span class="e1">e</span><span class="s2">s</span>
+    <span class="m"> </span><span class="m">M</span><span class="a">a</span><span class="t2">t</span><span class="h">h</span><span class="s2">s</span>
+  </header>
+  <div id="quiz">
+    <div id="question"></div>
+    <input type="text" id="answer" autocomplete="off">
+    <div>Temps: <span id="timer">0.00</span> secondes</div>
+    <button onclick="submitAnswer()">Valider</button>
+    <div id="score">Nombre de bonnes réponses : 0</div>
+  </div>
+  <div id="summary" style="display:none">
+    <div id="resultMessage"></div>
+  </div>
+
+  <script>
+    const questions = [
+      { q: "Combien font 6*7 ?", a: "42" },
+      { q: "Combien font 8+12 ?", a: "20" },
+      { q: "Combien font 15-3 ?", a: "12" },
+      { q: "Combien font 3*9 ?", a: "27" },
+      { q: "Combien font 100/4 ?", a: "25" },
+      { q: "Combien font 11*11 ?", a: "121" },
+      { q: "Combien font 7+8 ?", a: "15" },
+      { q: "Combien font 45-15 ?", a: "30" },
+      { q: "Combien font 9*5 ?", a: "45" },
+      { q: "Combien font 72/8 ?", a: "9" },
+      { q: "Combien font 6+7 ?", a: "13" },
+      { q: "Combien font 14-6 ?", a: "8" },
+      { q: "Combien font 3*4 ?", a: "12" },
+      { q: "Combien font 80/10 ?", a: "8" },
+      { q: "Combien font 10+10 ?", a: "20" },
+      { q: "Combien font 30-5 ?", a: "25" },
+      { q: "Combien font 6*6 ?", a: "36" },
+      { q: "Combien font 64/8 ?", a: "8" },
+      { q: "Combien font 5+7 ?", a: "12" },
+      { q: "Combien font 18-9 ?", a: "9" }
+    ];
+
+    let current = 0;
+    let timer = 0;
+    let interval;
+    const results = [];
+
+    function startQuestion() {
+      document.getElementById("answer").value = "";
+      document.getElementById("question").innerText = questions[current].q;
+      document.getElementById("timer").innerText = "0.00";
+      timer = 0;
+      const startTime = Date.now();
+      interval = setInterval(() => {
+        const elapsed = (Date.now() - startTime) / 1000;
+        timer = elapsed;
+        document.getElementById("timer").innerText = elapsed.toFixed(2);
+      }, 10);
+    }
+
+    function submitAnswer() {
+      if (!interval) return;
+      clearInterval(interval);
+      interval = null;
+      const userAnswer = document.getElementById("answer").value.trim();
+      const correctAnswer = questions[current].a;
+      const correct = userAnswer === correctAnswer;
+      results.push({
+        question: questions[current].q,
+        userAnswer,
+        correctAnswer,
+        time: timer.toFixed(2),
+        correct
+      });
+      updateScore();
+      current++;
+      if (current < questions.length) {
+        startQuestion();
+      } else {
+        showSummary();
+      }
+    }
+
+    function updateScore() {
+      const goodAnswers = results.filter(r => r.correct).length;
+      document.getElementById("score").innerText = `Nombre de bonnes réponses : ${goodAnswers}`;
+    }
+
+    function showSummary() {
+      const container = document.getElementById("summary");
+      container.style.display = "block";
+
+      const totalCorrect = results.filter(r => r.correct).length;
+      const totalTime = results.reduce((sum, r) => sum + parseFloat(r.time), 0).toFixed(2);
+
+      const message = document.getElementById("resultMessage");
+      message.innerText = `Bravo !!! Tu as répondu correctement à ${totalCorrect} questions sur ${results.length} en ${totalTime} secondes.`;
+
+      const table = document.createElement("table");
+      const headerRow = table.insertRow();
+      ["Question", "Réponse donnée", "Bonne réponse", "Temps"].forEach(text => {
+        const th = document.createElement("th");
+        th.innerText = text;
+        headerRow.appendChild(th);
+      });
+
+      results.forEach(res => {
+        const row = table.insertRow();
+        row.className = res.correct ? "correct" : "incorrect";
+        row.insertCell().innerText = res.question;
+        row.insertCell().innerText = res.userAnswer;
+        row.insertCell().innerText = res.correctAnswer;
+        row.insertCell().innerText = res.time + "s";
+      });
+
+      container.appendChild(table);
+
+      const textContent = results.map(r => `${r.question} | ${r.userAnswer} | ${r.correctAnswer} | ${r.time}s | ${r.correct ? 'Correct' : 'Incorrect'}`).join('\n');
+      const blob = new Blob([textContent], { type: "text/plain" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "resultats.txt";
+      a.textContent = "Télécharger les résultats";
+      container.appendChild(a);
+    }
+
+    document.getElementById("answer").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        submitAnswer();
+      }
+    });
+
+    startQuestion();
+  </script>
+</body>
+</html>

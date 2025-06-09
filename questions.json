@@ -1,0 +1,22 @@
+[
+  { "q": "Combien font 6 * 7 ?", "a": "42" },
+  { "q": "Combien font 8 + 12 ?", "a": "20" },
+  { "q": "Combien font 9 - 4 ?", "a": "5" },
+  { "q": "Combien font 15 / 3 ?", "a": "5" },
+  { "q": "Combien font 7 * 5 ?", "a": "35" },
+  { "q": "Combien font 10 + 15 ?", "a": "25" },
+  { "q": "Combien font 20 - 9 ?", "a": "11" },
+  { "q": "Combien font 14 / 2 ?", "a": "7" },
+  { "q": "Combien font 3 * 8 ?", "a": "24" },
+  { "q": "Combien font 18 + 4 ?", "a": "22" },
+  { "q": "Combien font 12 - 7 ?", "a": "5" },
+  { "q": "Combien font 16 / 4 ?", "a": "4" },
+  { "q": "Combien font 5 * 9 ?", "a": "45" },
+  { "q": "Combien font 11 + 13 ?", "a": "24" },
+  { "q": "Combien font 25 - 10 ?", "a": "15" },
+  { "q": "Combien font 30 / 5 ?", "a": "6" },
+  { "q": "Combien font 4 * 6 ?", "a": "24" },
+  { "q": "Combien font 7 + 8 ?", "a": "15" },
+  { "q": "Combien font 19 - 3 ?", "a": "16" },
+  { "q": "Combien font 21 / 7 ?", "a": "3" }
+]
