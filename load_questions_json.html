@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz Chrono</title>
+  <title>Calcul Mental - Revise tes Maths</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,8 +36,13 @@
     .logo .h { color: #55efc4; }
     .logo .s2 { color: #6c5ce7; }
 
+    #countdown {
+      font-size: 2em;
+      margin-top: 50px;
+    }
     #quiz {
       text-align: center;
+      display: none;
     }
     #question {
       font-weight: bold;
@@ -95,11 +100,6 @@
       color: #2c3e50;
       font-weight: bold;
     }
-    #countdown {
-      font-size: 2em;
-      margin-top: 50px;
-      color: #e74c3c;
-    }
   </style>
 </head>
 <body>
@@ -108,8 +108,8 @@
     <span class="t"> </span><span class="t">t</span><span class="e1">e</span><span class="s2">s</span>
     <span class="m"> </span><span class="m">M</span><span class="a">a</span><span class="t2">t</span><span class="h">h</span><span class="s2">s</span>
   </header>
-  <div id="countdown">Le quiz commence dans 5 secondes...</div>
-  <div id="quiz" style="display: none">
+  <div id="countdown">Préparation du quiz... 5</div>
+  <div id="quiz">
     <div id="question"></div>
     <input type="text" id="answer" autocomplete="off">
     <div>Temps: <span id="timer">0.00</span> secondes</div>
@@ -121,15 +121,19 @@
   </div>
 
   <script>
-    const questions = [
-      { q: "Combien font 6*7 ?", a: "42" },
-      { q: "Combien font 8+12 ?", a: "20" }
-    ];
-
+    let allQuestions = [];
+    let questions = [];
     let current = 0;
     let timer = 0;
     let interval;
     const results = [];
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
 
     function startQuestion() {
       document.getElementById("answer").value = "";
@@ -216,19 +220,25 @@
       }
     });
 
-    // Compte à rebours avant le début
-    let countdownValue = 5;
-    const countdownElement = document.getElementById("countdown");
-    const countdownInterval = setInterval(() => {
-      countdownElement.innerText = `Le quiz commence dans ${countdownValue} secondes...`;
-      countdownValue--;
-      if (countdownValue < 0) {
-        clearInterval(countdownInterval);
-        countdownElement.style.display = "none";
-        document.getElementById("quiz").style.display = "block";
-        startQuestion();
-      }
-    }, 1000);
+    fetch('questions.json')
+      .then(response => response.json())
+      .then(data => {
+        allQuestions = data;
+        shuffleArray(allQuestions);
+        questions = allQuestions.slice(0, 20);
+        let countdownValue = 5;
+        const countdownDiv = document.getElementById('countdown');
+        const intervalCountdown = setInterval(() => {
+          countdownValue--;
+          countdownDiv.innerText = `Préparation du quiz... ${countdownValue}`;
+          if (countdownValue === 0) {
+            clearInterval(intervalCountdown);
+            countdownDiv.style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            startQuestion();
+          }
+        }, 1000);
+      });
   </script>
 </body>
 </html>
