@@ -1,22 +1,4002 @@
 [
-  { "q": "Combien font 6 * 7 ?", "a": "42" },
-  { "q": "Combien font 8 + 12 ?", "a": "20" },
-  { "q": "Combien font 9 - 4 ?", "a": "5" },
-  { "q": "Combien font 15 / 3 ?", "a": "5" },
-  { "q": "Combien font 7 * 5 ?", "a": "35" },
-  { "q": "Combien font 10 + 15 ?", "a": "25" },
-  { "q": "Combien font 20 - 9 ?", "a": "11" },
-  { "q": "Combien font 14 / 2 ?", "a": "7" },
-  { "q": "Combien font 3 * 8 ?", "a": "24" },
-  { "q": "Combien font 18 + 4 ?", "a": "22" },
-  { "q": "Combien font 12 - 7 ?", "a": "5" },
-  { "q": "Combien font 16 / 4 ?", "a": "4" },
-  { "q": "Combien font 5 * 9 ?", "a": "45" },
-  { "q": "Combien font 11 + 13 ?", "a": "24" },
-  { "q": "Combien font 25 - 10 ?", "a": "15" },
-  { "q": "Combien font 30 / 5 ?", "a": "6" },
-  { "q": "Combien font 4 * 6 ?", "a": "24" },
-  { "q": "Combien font 7 + 8 ?", "a": "15" },
-  { "q": "Combien font 19 - 3 ?", "a": "16" },
-  { "q": "Combien font 21 / 7 ?", "a": "3" }
+  {
+    "q": "Combien font 152 ÷ 4 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 360 ÷ 6 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 2 × 35 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 208 ÷ 4 ?",
+    "a": "52"
+  },
+  {
+    "q": "Combien font 222 ÷ 6 ?",
+    "a": "37"
+  },
+  {
+    "q": "Combien font 792 ÷ 9 ?",
+    "a": "88"
+  },
+  {
+    "q": "Combien font 224 ÷ 7 ?",
+    "a": "32"
+  },
+  {
+    "q": "Combien font 45 × 12 ?",
+    "a": "540"
+  },
+  {
+    "q": "Combien font 24 ÷ 3 ?",
+    "a": "8"
+  },
+  {
+    "q": "Combien font 297 ÷ 3 ?",
+    "a": "99"
+  },
+  {
+    "q": "Combien font 940 ÷ 10 ?",
+    "a": "94"
+  },
+  {
+    "q": "Combien font 192 ÷ 4 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 10 × 75 ?",
+    "a": "750"
+  },
+  {
+    "q": "Combien font 50 × 3 ?",
+    "a": "150"
+  },
+  {
+    "q": "Combien font 75 × 85 ?",
+    "a": "6375"
+  },
+  {
+    "q": "Combien font 1 × 10 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 12 × 65 ?",
+    "a": "780"
+  },
+  {
+    "q": "Combien font 94 ÷ 1 ?",
+    "a": "94"
+  },
+  {
+    "q": "Combien font 90 × 13 ?",
+    "a": "1170"
+  },
+  {
+    "q": "Combien font 40 × 6 ?",
+    "a": "240"
+  },
+  {
+    "q": "Combien font 330 ÷ 10 ?",
+    "a": "33"
+  },
+  {
+    "q": "Combien font 840 ÷ 15 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 50 × 1 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 65 × 95 ?",
+    "a": "6175"
+  },
+  {
+    "q": "Combien font 1 × 100 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 20 × 85 ?",
+    "a": "1700"
+  },
+  {
+    "q": "Combien font 65 × 14 ?",
+    "a": "910"
+  },
+  {
+    "q": "Combien font 884 ÷ 26 ?",
+    "a": "34"
+  },
+  {
+    "q": "Combien font 6 × 85 ?",
+    "a": "510"
+  },
+  {
+    "q": "Combien font 8 × 4 ?",
+    "a": "32"
+  },
+  {
+    "q": "Quel est le carré de 10 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 10 ÷ 1 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 930 ÷ 10 ?",
+    "a": "93"
+  },
+  {
+    "q": "Combien font 55 × 1 ?",
+    "a": "55"
+  },
+  {
+    "q": "Combien font 30 × 90 ?",
+    "a": "2700"
+  },
+  {
+    "q": "Combien font 204 ÷ 4 ?",
+    "a": "51"
+  },
+  {
+    "q": "Combien font 192 ÷ 8 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 36 ÷ 2 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 90 × 80 ?",
+    "a": "7200"
+  },
+  {
+    "q": "Combien font 69 ÷ 3 ?",
+    "a": "23"
+  },
+  {
+    "q": "Combien font 14 × 85 ?",
+    "a": "1190"
+  },
+  {
+    "q": "Combien font 40 × 60 ?",
+    "a": "2400"
+  },
+  {
+    "q": "Combien font 180 ÷ 2 ?",
+    "a": "90"
+  },
+  {
+    "q": "Combien font 38 ÷ 1 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 8 × 6 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 100 × 14 ?",
+    "a": "1400"
+  },
+  {
+    "q": "Combien font 20 × 90 ?",
+    "a": "1800"
+  },
+  {
+    "q": "Combien font 105 ÷ 7 ?",
+    "a": "15"
+  },
+  {
+    "q": "Combien font 70 ÷ 7 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 55 × 7 ?",
+    "a": "385"
+  },
+  {
+    "q": "Combien font 30 ÷ 10 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 24 ÷ 6 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 520 ÷ 10 ?",
+    "a": "52"
+  },
+  {
+    "q": "Combien font 111 ÷ 3 ?",
+    "a": "37"
+  },
+  {
+    "q": "Combien font 75 × 9 ?",
+    "a": "675"
+  },
+  {
+    "q": "Combien font 9 × 25 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 95 × 14 ?",
+    "a": "1330"
+  },
+  {
+    "q": "Combien font 800 ÷ 8 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 42 ÷ 7 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 55 × 60 ?",
+    "a": "3300"
+  },
+  {
+    "q": "Combien font 144 ÷ 6 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 9 × 90 ?",
+    "a": "810"
+  },
+  {
+    "q": "Combien font 33 ÷ 1 ?",
+    "a": "33"
+  },
+  {
+    "q": "Combien font 100 × 85 ?",
+    "a": "8500"
+  },
+  {
+    "q": "Combien font 40 × 5 ?",
+    "a": "200"
+  },
+  {
+    "q": "Combien font 165 ÷ 3 ?",
+    "a": "55"
+  },
+  {
+    "q": "Combien font 495 ÷ 9 ?",
+    "a": "55"
+  },
+  {
+    "q": "Combien font 15 × 95 ?",
+    "a": "1425"
+  },
+  {
+    "q": "Combien font 100 × 15 ?",
+    "a": "1500"
+  },
+  {
+    "q": "Combien font 910 ÷ 10 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 85 × 100 ?",
+    "a": "8500"
+  },
+  {
+    "q": "Combien font 10 × 5 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 408 ÷ 8 ?",
+    "a": "51"
+  },
+  {
+    "q": "Combien font 35 × 40 ?",
+    "a": "1400"
+  },
+  {
+    "q": "Combien font 20 × 2 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 60 ÷ 4 ?",
+    "a": "15"
+  },
+  {
+    "q": "Combien font 156 ÷ 4 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 90 × 11 ?",
+    "a": "990"
+  },
+  {
+    "q": "Combien font 3 × 25 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 25 × 85 ?",
+    "a": "2125"
+  },
+  {
+    "q": "Combien font 67 ÷ 1 ?",
+    "a": "67"
+  },
+  {
+    "q": "Combien font 7 × 12 ?",
+    "a": "84"
+  },
+  {
+    "q": "Combien font 8 × 45 ?",
+    "a": "360"
+  },
+  {
+    "q": "Combien font 265 ÷ 5 ?",
+    "a": "53"
+  },
+  {
+    "q": "Combien font 553 ÷ 7 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 1 × 30 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 1 × 1 ?",
+    "a": "1"
+  },
+  {
+    "q": "Combien font 405 ÷ 5 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 130 ÷ 5 ?",
+    "a": "26"
+  },
+  {
+    "q": "Combien font 85 × 35 ?",
+    "a": "2975"
+  },
+  {
+    "q": "Combien font 72 ÷ 9 ?",
+    "a": "8"
+  },
+  {
+    "q": "Combien font 100 × 100 ?",
+    "a": "10000"
+  },
+  {
+    "q": "Combien font 840 ÷ 10 ?",
+    "a": "84"
+  },
+  {
+    "q": "Combien font 112 ÷ 4 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 8 × 12 ?",
+    "a": "96"
+  },
+  {
+    "q": "Combien font 20 × 40 ?",
+    "a": "800"
+  },
+  {
+    "q": "Combien font 35 × 11 ?",
+    "a": "385"
+  },
+  {
+    "q": "Combien font 375 ÷ 5 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 75 ÷ 1 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 5 × 2 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 70 × 65 ?",
+    "a": "4550"
+  },
+  {
+    "q": "Combien font 282 ÷ 3 ?",
+    "a": "94"
+  },
+  {
+    "q": "Combien font 90 ÷ 15 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 45 ÷ 15 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 100 × 25 ?",
+    "a": "2500"
+  },
+  {
+    "q": "Combien font 80 × 20 ?",
+    "a": "1600"
+  },
+  {
+    "q": "Combien font 300 ÷ 3 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 270 ÷ 10 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 730 ÷ 10 ?",
+    "a": "73"
+  },
+  {
+    "q": "Combien font 3 × 1 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 45 × 3 ?",
+    "a": "135"
+  },
+  {
+    "q": "Combien font 310 ÷ 10 ?",
+    "a": "31"
+  },
+  {
+    "q": "Combien font 135 ÷ 5 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 7 × 50 ?",
+    "a": "350"
+  },
+  {
+    "q": "Combien font 55 × 9 ?",
+    "a": "495"
+  },
+  {
+    "q": "Combien font 132 ÷ 3 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 2 × 3 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 287 ÷ 7 ?",
+    "a": "41"
+  },
+  {
+    "q": "Combien font 95 × 50 ?",
+    "a": "4750"
+  },
+  {
+    "q": "Combien font 20 × 4 ?",
+    "a": "80"
+  },
+  {
+    "q": "Combien font 45 × 4 ?",
+    "a": "180"
+  },
+  {
+    "q": "Combien font 520 ÷ 26 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 615 ÷ 15 ?",
+    "a": "41"
+  },
+  {
+    "q": "Combien font 96 ÷ 6 ?",
+    "a": "16"
+  },
+  {
+    "q": "Combien font 180 ÷ 10 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 13 × 5 ?",
+    "a": "65"
+  },
+  {
+    "q": "Combien font 7 × 100 ?",
+    "a": "700"
+  },
+  {
+    "q": "Combien font 14 × 5 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 234 ÷ 26 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 3 × 13 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 11 × 13 ?",
+    "a": "143"
+  },
+  {
+    "q": "Combien font 747 ÷ 9 ?",
+    "a": "83"
+  },
+  {
+    "q": "Combien font 45 × 95 ?",
+    "a": "4275"
+  },
+  {
+    "q": "Combien font 90 × 60 ?",
+    "a": "5400"
+  },
+  {
+    "q": "Combien font 55 × 4 ?",
+    "a": "220"
+  },
+  {
+    "q": "Combien font 5 × 7 ?",
+    "a": "35"
+  },
+  {
+    "q": "Combien font 75 × 60 ?",
+    "a": "4500"
+  },
+  {
+    "q": "Combien font 260 ÷ 10 ?",
+    "a": "26"
+  },
+  {
+    "q": "Combien font 13 × 15 ?",
+    "a": "195"
+  },
+  {
+    "q": "Combien font 4 × 1 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 50 × 40 ?",
+    "a": "2000"
+  },
+  {
+    "q": "Combien font 10 ÷ 10 ?",
+    "a": "1"
+  },
+  {
+    "q": "Combien font 118 ÷ 2 ?",
+    "a": "59"
+  },
+  {
+    "q": "Combien font 765 ÷ 15 ?",
+    "a": "51"
+  },
+  {
+    "q": "Combien font 45 × 5 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 12 ÷ 6 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 25 × 55 ?",
+    "a": "1375"
+  },
+  {
+    "q": "Combien font 40 × 30 ?",
+    "a": "1200"
+  },
+  {
+    "q": "Combien font 5 × 10 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 180 ÷ 3 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 8 × 10 ?",
+    "a": "80"
+  },
+  {
+    "q": "Combien font 70 × 9 ?",
+    "a": "630"
+  },
+  {
+    "q": "Combien font 3 × 3 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 15 × 2 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 2 × 10 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 13 × 95 ?",
+    "a": "1235"
+  },
+  {
+    "q": "Combien font 460 ÷ 5 ?",
+    "a": "92"
+  },
+  {
+    "q": "Combien font 13 × 20 ?",
+    "a": "260"
+  },
+  {
+    "q": "Combien font 380 ÷ 4 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 186 ÷ 3 ?",
+    "a": "62"
+  },
+  {
+    "q": "Combien font 444 ÷ 6 ?",
+    "a": "74"
+  },
+  {
+    "q": "Combien font 270 ÷ 9 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 30 ÷ 3 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 285 ÷ 5 ?",
+    "a": "57"
+  },
+  {
+    "q": "Combien font 108 ÷ 6 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 495 ÷ 15 ?",
+    "a": "33"
+  },
+  {
+    "q": "Combien font 45 × 60 ?",
+    "a": "2700"
+  },
+  {
+    "q": "Combien font 75 × 95 ?",
+    "a": "7125"
+  },
+  {
+    "q": "Combien font 456 ÷ 8 ?",
+    "a": "57"
+  },
+  {
+    "q": "Combien font 1 × 14 ?",
+    "a": "14"
+  },
+  {
+    "q": "Combien font 10 × 14 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 5 ÷ 1 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 356 ÷ 4 ?",
+    "a": "89"
+  },
+  {
+    "q": "Combien font 450 ÷ 5 ?",
+    "a": "90"
+  },
+  {
+    "q": "Combien font 288 ÷ 8 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 25 × 2 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 315 ÷ 9 ?",
+    "a": "35"
+  },
+  {
+    "q": "Combien font 119 ÷ 7 ?",
+    "a": "17"
+  },
+  {
+    "q": "Combien font 450 ÷ 10 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 846 ÷ 9 ?",
+    "a": "94"
+  },
+  {
+    "q": "Combien font 488 ÷ 8 ?",
+    "a": "61"
+  },
+  {
+    "q": "Combien font 8 × 60 ?",
+    "a": "480"
+  },
+  {
+    "q": "Combien font 95 ÷ 5 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 430 ÷ 10 ?",
+    "a": "43"
+  },
+  {
+    "q": "Combien font 25 × 30 ?",
+    "a": "750"
+  },
+  {
+    "q": "Combien font 25 × 6 ?",
+    "a": "150"
+  },
+  {
+    "q": "Combien font 360 ÷ 9 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 235 ÷ 5 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 7 × 3 ?",
+    "a": "21"
+  },
+  {
+    "q": "Quel est le carré de 8 ?",
+    "a": "64"
+  },
+  {
+    "q": "Combien font 30 ÷ 6 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 75 × 5 ?",
+    "a": "375"
+  },
+  {
+    "q": "Combien font 3 × 40 ?",
+    "a": "120"
+  },
+  {
+    "q": "Combien font 25 × 100 ?",
+    "a": "2500"
+  },
+  {
+    "q": "Combien font 9 × 35 ?",
+    "a": "315"
+  },
+  {
+    "q": "Combien font 116 ÷ 4 ?",
+    "a": "29"
+  },
+  {
+    "q": "Combien font 90 × 12 ?",
+    "a": "1080"
+  },
+  {
+    "q": "Combien font 80 ÷ 4 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 369 ÷ 9 ?",
+    "a": "41"
+  },
+  {
+    "q": "Combien font 980 ÷ 10 ?",
+    "a": "98"
+  },
+  {
+    "q": "Combien font 400 ÷ 100 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 125 ÷ 5 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 6 × 10 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 14 ÷ 1 ?",
+    "a": "14"
+  },
+  {
+    "q": "Combien font 13 × 6 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 360 ÷ 10 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 558 ÷ 6 ?",
+    "a": "93"
+  },
+  {
+    "q": "Combien font 82 ÷ 1 ?",
+    "a": "82"
+  },
+  {
+    "q": "Combien font 25 × 3 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 84 ÷ 3 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 36 ÷ 3 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 420 ÷ 7 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 294 ÷ 3 ?",
+    "a": "98"
+  },
+  {
+    "q": "Combien font 35 × 2 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 14 × 15 ?",
+    "a": "210"
+  },
+  {
+    "q": "Combien font 80 × 2 ?",
+    "a": "160"
+  },
+  {
+    "q": "Combien font 2 × 55 ?",
+    "a": "110"
+  },
+  {
+    "q": "Combien font 11 × 1 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 11 × 90 ?",
+    "a": "990"
+  },
+  {
+    "q": "Combien font 576 ÷ 6 ?",
+    "a": "96"
+  },
+  {
+    "q": "Combien font 225 ÷ 3 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 80 × 90 ?",
+    "a": "7200"
+  },
+  {
+    "q": "Combien font 30 × 7 ?",
+    "a": "210"
+  },
+  {
+    "q": "Combien font 228 ÷ 6 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 112 ÷ 7 ?",
+    "a": "16"
+  },
+  {
+    "q": "Combien font 95 × 3 ?",
+    "a": "285"
+  },
+  {
+    "q": "Combien font 165 ÷ 15 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 512 ÷ 8 ?",
+    "a": "64"
+  },
+  {
+    "q": "Combien font 486 ÷ 6 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 470 ÷ 10 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 195 ÷ 15 ?",
+    "a": "13"
+  },
+  {
+    "q": "Combien font 14 × 100 ?",
+    "a": "1400"
+  },
+  {
+    "q": "Combien font 78 ÷ 1 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 9 × 10 ?",
+    "a": "90"
+  },
+  {
+    "q": "Combien font 240 ÷ 5 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 855 ÷ 9 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 60 × 85 ?",
+    "a": "5100"
+  },
+  {
+    "q": "Combien font 65 × 15 ?",
+    "a": "975"
+  },
+  {
+    "q": "Combien font 79 ÷ 1 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 245 ÷ 5 ?",
+    "a": "49"
+  },
+  {
+    "q": "Combien font 85 × 15 ?",
+    "a": "1275"
+  },
+  {
+    "q": "Combien font 8 × 7 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 78 ÷ 26 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 6 × 45 ?",
+    "a": "270"
+  },
+  {
+    "q": "Combien font 104 ÷ 2 ?",
+    "a": "52"
+  },
+  {
+    "q": "Combien font 20 × 15 ?",
+    "a": "300"
+  },
+  {
+    "q": "Combien font 445 ÷ 5 ?",
+    "a": "89"
+  },
+  {
+    "q": "Combien font 550 ÷ 10 ?",
+    "a": "55"
+  },
+  {
+    "q": "Combien font 426 ÷ 6 ?",
+    "a": "71"
+  },
+  {
+    "q": "Combien font 776 ÷ 8 ?",
+    "a": "97"
+  },
+  {
+    "q": "Combien font 364 ÷ 26 ?",
+    "a": "14"
+  },
+  {
+    "q": "Combien font 60 ÷ 2 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 8 × 3 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 70 × 80 ?",
+    "a": "5600"
+  },
+  {
+    "q": "Combien font 270 ÷ 3 ?",
+    "a": "90"
+  },
+  {
+    "q": "Combien font 729 ÷ 9 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 264 ÷ 6 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 11 × 4 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 7 × 4 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 216 ÷ 9 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 5 × 95 ?",
+    "a": "475"
+  },
+  {
+    "q": "Combien font 280 ÷ 4 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 4 × 60 ?",
+    "a": "240"
+  },
+  {
+    "q": "Combien font 30 × 65 ?",
+    "a": "1950"
+  },
+  {
+    "q": "Combien font 85 × 3 ?",
+    "a": "255"
+  },
+  {
+    "q": "Combien font 85 ÷ 1 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 28 ÷ 2 ?",
+    "a": "14"
+  },
+  {
+    "q": "Combien font 333 ÷ 9 ?",
+    "a": "37"
+  },
+  {
+    "q": "Combien font 56 ÷ 2 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 546 ÷ 6 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 100 × 10 ?",
+    "a": "1000"
+  },
+  {
+    "q": "Combien font 200 ÷ 8 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 18 ÷ 1 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 80 × 13 ?",
+    "a": "1040"
+  },
+  {
+    "q": "Combien font 1 × 45 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 492 ÷ 6 ?",
+    "a": "82"
+  },
+  {
+    "q": "Combien font 60 ÷ 6 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 20 ÷ 10 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 90 × 4 ?",
+    "a": "360"
+  },
+  {
+    "q": "Combien font 55 × 5 ?",
+    "a": "275"
+  },
+  {
+    "q": "Combien font 152 ÷ 2 ?",
+    "a": "76"
+  },
+  {
+    "q": "Combien font 340 ÷ 5 ?",
+    "a": "68"
+  },
+  {
+    "q": "Combien font 50 × 14 ?",
+    "a": "700"
+  },
+  {
+    "q": "Combien font 256 ÷ 4 ?",
+    "a": "64"
+  },
+  {
+    "q": "Combien font 474 ÷ 6 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 234 ÷ 3 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 8 × 50 ?",
+    "a": "400"
+  },
+  {
+    "q": "Combien font 6 × 60 ?",
+    "a": "360"
+  },
+  {
+    "q": "Combien font 12 × 45 ?",
+    "a": "540"
+  },
+  {
+    "q": "Combien font 15 × 65 ?",
+    "a": "975"
+  },
+  {
+    "q": "Combien font 65 × 70 ?",
+    "a": "4550"
+  },
+  {
+    "q": "Combien font 950 ÷ 10 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 5 × 14 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 3 × 7 ?",
+    "a": "21"
+  },
+  {
+    "q": "Combien font 136 ÷ 4 ?",
+    "a": "34"
+  },
+  {
+    "q": "Combien font 5 × 75 ?",
+    "a": "375"
+  },
+  {
+    "q": "Quel est le carré de 15 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 4 × 35 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 72 ÷ 4 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 25 × 90 ?",
+    "a": "2250"
+  },
+  {
+    "q": "Combien font 24 ÷ 4 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 124 ÷ 2 ?",
+    "a": "62"
+  },
+  {
+    "q": "Combien font 75 × 14 ?",
+    "a": "1050"
+  },
+  {
+    "q": "Combien font 832 ÷ 26 ?",
+    "a": "32"
+  },
+  {
+    "q": "Combien font 95 × 2 ?",
+    "a": "190"
+  },
+  {
+    "q": "Combien font 13 × 90 ?",
+    "a": "1170"
+  },
+  {
+    "q": "Combien font 13 × 35 ?",
+    "a": "455"
+  },
+  {
+    "q": "Combien font 1 × 40 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 42 ÷ 6 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 7 × 65 ?",
+    "a": "455"
+  },
+  {
+    "q": "Combien font 144 ÷ 3 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 15 ÷ 5 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 9 × 15 ?",
+    "a": "135"
+  },
+  {
+    "q": "Combien font 318 ÷ 6 ?",
+    "a": "53"
+  },
+  {
+    "q": "Combien font 6 × 50 ?",
+    "a": "300"
+  },
+  {
+    "q": "Combien font 330 ÷ 15 ?",
+    "a": "22"
+  },
+  {
+    "q": "Combien font 50 × 7 ?",
+    "a": "350"
+  },
+  {
+    "q": "Combien font 1 × 20 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 95 × 5 ?",
+    "a": "475"
+  },
+  {
+    "q": "Combien font 665 ÷ 7 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 232 ÷ 8 ?",
+    "a": "29"
+  },
+  {
+    "q": "Combien font 80 × 25 ?",
+    "a": "2000"
+  },
+  {
+    "q": "Combien font 480 ÷ 15 ?",
+    "a": "32"
+  },
+  {
+    "q": "Combien font 300 ÷ 5 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 4 × 6 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 5 × 55 ?",
+    "a": "275"
+  },
+  {
+    "q": "Combien font 154 ÷ 2 ?",
+    "a": "77"
+  },
+  {
+    "q": "Combien font 3 × 15 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 43 ÷ 1 ?",
+    "a": "43"
+  },
+  {
+    "q": "Combien font 95 × 7 ?",
+    "a": "665"
+  },
+  {
+    "q": "Combien font 180 ÷ 4 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 13 ÷ 1 ?",
+    "a": "13"
+  },
+  {
+    "q": "Combien font 95 × 1 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 12 × 13 ?",
+    "a": "156"
+  },
+  {
+    "q": "Combien font 14 × 95 ?",
+    "a": "1330"
+  },
+  {
+    "q": "Combien font 85 × 12 ?",
+    "a": "1020"
+  },
+  {
+    "q": "Combien font 63 ÷ 9 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 285 ÷ 15 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 4 × 11 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 14 × 60 ?",
+    "a": "840"
+  },
+  {
+    "q": "Combien font 65 × 20 ?",
+    "a": "1300"
+  },
+  {
+    "q": "Combien font 60 × 6 ?",
+    "a": "360"
+  },
+  {
+    "q": "Combien font 140 ÷ 5 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 720 ÷ 10 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 20 × 8 ?",
+    "a": "160"
+  },
+  {
+    "q": "Combien font 210 ÷ 5 ?",
+    "a": "42"
+  },
+  {
+    "q": "Combien font 15 × 9 ?",
+    "a": "135"
+  },
+  {
+    "q": "Combien font 174 ÷ 6 ?",
+    "a": "29"
+  },
+  {
+    "q": "Combien font 100 × 45 ?",
+    "a": "4500"
+  },
+  {
+    "q": "Combien font 710 ÷ 10 ?",
+    "a": "71"
+  },
+  {
+    "q": "Combien font 20 × 6 ?",
+    "a": "120"
+  },
+  {
+    "q": "Combien font 20 × 45 ?",
+    "a": "900"
+  },
+  {
+    "q": "Combien font 60 × 70 ?",
+    "a": "4200"
+  },
+  {
+    "q": "Combien font 5 × 9 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 13 × 40 ?",
+    "a": "520"
+  },
+  {
+    "q": "Combien font 5 × 85 ?",
+    "a": "425"
+  },
+  {
+    "q": "Combien font 450 ÷ 15 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 1 × 3 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 35 × 45 ?",
+    "a": "1575"
+  },
+  {
+    "q": "Combien font 50 × 9 ?",
+    "a": "450"
+  },
+  {
+    "q": "Combien font 8 × 75 ?",
+    "a": "600"
+  },
+  {
+    "q": "Combien font 464 ÷ 8 ?",
+    "a": "58"
+  },
+  {
+    "q": "Combien font 190 ÷ 10 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 6 × 55 ?",
+    "a": "330"
+  },
+  {
+    "q": "Combien font 64 ÷ 1 ?",
+    "a": "64"
+  },
+  {
+    "q": "Combien font 38 ÷ 2 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 455 ÷ 7 ?",
+    "a": "65"
+  },
+  {
+    "q": "Combien font 11 × 12 ?",
+    "a": "132"
+  },
+  {
+    "q": "Combien font 36 ÷ 9 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 60 × 12 ?",
+    "a": "720"
+  },
+  {
+    "q": "Combien font 12 × 3 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 55 × 12 ?",
+    "a": "660"
+  },
+  {
+    "q": "Combien font 498 ÷ 6 ?",
+    "a": "83"
+  },
+  {
+    "q": "Combien font 528 ÷ 8 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 297 ÷ 9 ?",
+    "a": "33"
+  },
+  {
+    "q": "Combien font 60 × 10 ?",
+    "a": "600"
+  },
+  {
+    "q": "Combien font 272 ÷ 4 ?",
+    "a": "68"
+  },
+  {
+    "q": "Combien font 10 ÷ 5 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 55 × 40 ?",
+    "a": "2200"
+  },
+  {
+    "q": "Combien font 95 × 85 ?",
+    "a": "8075"
+  },
+  {
+    "q": "Combien font 60 ÷ 1 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 85 × 8 ?",
+    "a": "680"
+  },
+  {
+    "q": "Combien font 10 ÷ 2 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 936 ÷ 26 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 40 × 12 ?",
+    "a": "480"
+  },
+  {
+    "q": "Combien font 7 × 60 ?",
+    "a": "420"
+  },
+  {
+    "q": "Combien font 12 × 40 ?",
+    "a": "480"
+  },
+  {
+    "q": "Combien font 30 × 45 ?",
+    "a": "1350"
+  },
+  {
+    "q": "Combien font 570 ÷ 6 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 85 × 5 ?",
+    "a": "425"
+  },
+  {
+    "q": "Combien font 172 ÷ 2 ?",
+    "a": "86"
+  },
+  {
+    "q": "Combien font 95 × 100 ?",
+    "a": "9500"
+  },
+  {
+    "q": "Combien font 168 ÷ 2 ?",
+    "a": "84"
+  },
+  {
+    "q": "Combien font 40 × 100 ?",
+    "a": "4000"
+  },
+  {
+    "q": "Combien font 50 × 13 ?",
+    "a": "650"
+  },
+  {
+    "q": "Combien font 30 × 9 ?",
+    "a": "270"
+  },
+  {
+    "q": "Combien font 198 ÷ 9 ?",
+    "a": "22"
+  },
+  {
+    "q": "Combien font 114 ÷ 6 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 36 ÷ 6 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 232 ÷ 4 ?",
+    "a": "58"
+  },
+  {
+    "q": "Combien font 371 ÷ 7 ?",
+    "a": "53"
+  },
+  {
+    "q": "Combien font 148 ÷ 2 ?",
+    "a": "74"
+  },
+  {
+    "q": "Combien font 465 ÷ 5 ?",
+    "a": "93"
+  },
+  {
+    "q": "Combien font 300 ÷ 6 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 8 × 90 ?",
+    "a": "720"
+  },
+  {
+    "q": "Combien font 12 × 8 ?",
+    "a": "96"
+  },
+  {
+    "q": "Combien font 40 × 11 ?",
+    "a": "440"
+  },
+  {
+    "q": "Combien font 6 × 65 ?",
+    "a": "390"
+  },
+  {
+    "q": "Combien font 20 ÷ 1 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 234 ÷ 9 ?",
+    "a": "26"
+  },
+  {
+    "q": "Combien font 65 × 12 ?",
+    "a": "780"
+  },
+  {
+    "q": "Combien font 3 × 10 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 75 × 15 ?",
+    "a": "1125"
+  },
+  {
+    "q": "Combien font 70 × 30 ?",
+    "a": "2100"
+  },
+  {
+    "q": "Combien font 7 × 20 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 3 × 95 ?",
+    "a": "285"
+  },
+  {
+    "q": "Combien font 192 ÷ 6 ?",
+    "a": "32"
+  },
+  {
+    "q": "Combien font 35 × 4 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 45 × 7 ?",
+    "a": "315"
+  },
+  {
+    "q": "Combien font 182 ÷ 2 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 500 ÷ 5 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 50 × 80 ?",
+    "a": "4000"
+  },
+  {
+    "q": "Combien font 30 × 20 ?",
+    "a": "600"
+  },
+  {
+    "q": "Combien font 9 × 50 ?",
+    "a": "450"
+  },
+  {
+    "q": "Combien font 90 × 9 ?",
+    "a": "810"
+  },
+  {
+    "q": "Combien font 368 ÷ 4 ?",
+    "a": "92"
+  },
+  {
+    "q": "Combien font 3 × 45 ?",
+    "a": "135"
+  },
+  {
+    "q": "Combien font 45 × 35 ?",
+    "a": "1575"
+  },
+  {
+    "q": "Combien font 200 ÷ 5 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 25 × 35 ?",
+    "a": "875"
+  },
+  {
+    "q": "Combien font 85 × 40 ?",
+    "a": "3400"
+  },
+  {
+    "q": "Combien font 50 × 6 ?",
+    "a": "300"
+  },
+  {
+    "q": "Combien font 75 × 35 ?",
+    "a": "2625"
+  },
+  {
+    "q": "Combien font 85 × 65 ?",
+    "a": "5525"
+  },
+  {
+    "q": "Combien font 1000 ÷ 100 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 6 × 70 ?",
+    "a": "420"
+  },
+  {
+    "q": "Combien font 50 × 45 ?",
+    "a": "2250"
+  },
+  {
+    "q": "Combien font 75 × 50 ?",
+    "a": "3750"
+  },
+  {
+    "q": "Combien font 45 ÷ 3 ?",
+    "a": "15"
+  },
+  {
+    "q": "Combien font 504 ÷ 6 ?",
+    "a": "84"
+  },
+  {
+    "q": "Combien font 8 × 65 ?",
+    "a": "520"
+  },
+  {
+    "q": "Combien font 75 × 90 ?",
+    "a": "6750"
+  },
+  {
+    "q": "Combien font 70 × 1 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 91 ÷ 1 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 4 × 12 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 117 ÷ 3 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 276 ÷ 3 ?",
+    "a": "92"
+  },
+  {
+    "q": "Combien font 45 × 15 ?",
+    "a": "675"
+  },
+  {
+    "q": "Combien font 891 ÷ 9 ?",
+    "a": "99"
+  },
+  {
+    "q": "Combien font 90 × 65 ?",
+    "a": "5850"
+  },
+  {
+    "q": "Combien font 95 × 90 ?",
+    "a": "8550"
+  },
+  {
+    "q": "Combien font 4 × 14 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 324 ÷ 6 ?",
+    "a": "54"
+  },
+  {
+    "q": "Combien font 54 ÷ 2 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 95 × 80 ?",
+    "a": "7600"
+  },
+  {
+    "q": "Combien font 360 ÷ 8 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 280 ÷ 5 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 9 × 100 ?",
+    "a": "900"
+  },
+  {
+    "q": "Combien font 574 ÷ 7 ?",
+    "a": "82"
+  },
+  {
+    "q": "Combien font 25 ÷ 5 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 12 × 30 ?",
+    "a": "360"
+  },
+  {
+    "q": "Combien font 100 ÷ 100 ?",
+    "a": "1"
+  },
+  {
+    "q": "Combien font 45 × 80 ?",
+    "a": "3600"
+  },
+  {
+    "q": "Combien font 216 ÷ 6 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 90 × 55 ?",
+    "a": "4950"
+  },
+  {
+    "q": "Combien font 11 × 100 ?",
+    "a": "1100"
+  },
+  {
+    "q": "Combien font 598 ÷ 26 ?",
+    "a": "23"
+  },
+  {
+    "q": "Combien font 198 ÷ 3 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 30 × 8 ?",
+    "a": "240"
+  },
+  {
+    "q": "Combien font 246 ÷ 3 ?",
+    "a": "82"
+  },
+  {
+    "q": "Combien font 14 × 6 ?",
+    "a": "84"
+  },
+  {
+    "q": "Combien font 65 × 35 ?",
+    "a": "2275"
+  },
+  {
+    "q": "Combien font 60 × 80 ?",
+    "a": "4800"
+  },
+  {
+    "q": "Combien font 57 ÷ 3 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 7 × 6 ?",
+    "a": "42"
+  },
+  {
+    "q": "Combien font 63 ÷ 7 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 603 ÷ 9 ?",
+    "a": "67"
+  },
+  {
+    "q": "Combien font 351 ÷ 9 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 350 ÷ 5 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 50 × 70 ?",
+    "a": "3500"
+  },
+  {
+    "q": "Combien font 120 ÷ 10 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 90 ÷ 9 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 14 × 9 ?",
+    "a": "126"
+  },
+  {
+    "q": "Combien font 552 ÷ 8 ?",
+    "a": "69"
+  },
+  {
+    "q": "Combien font 65 × 7 ?",
+    "a": "455"
+  },
+  {
+    "q": "Combien font 700 ÷ 7 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 6 × 80 ?",
+    "a": "480"
+  },
+  {
+    "q": "Combien font 21 ÷ 7 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 304 ÷ 4 ?",
+    "a": "76"
+  },
+  {
+    "q": "Combien font 188 ÷ 4 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 616 ÷ 8 ?",
+    "a": "77"
+  },
+  {
+    "q": "Combien font 648 ÷ 9 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 666 ÷ 9 ?",
+    "a": "74"
+  },
+  {
+    "q": "Combien font 819 ÷ 9 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 915 ÷ 15 ?",
+    "a": "61"
+  },
+  {
+    "q": "Combien font 510 ÷ 6 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 55 × 70 ?",
+    "a": "3850"
+  },
+  {
+    "q": "Combien font 783 ÷ 9 ?",
+    "a": "87"
+  },
+  {
+    "q": "Combien font 100 × 7 ?",
+    "a": "700"
+  },
+  {
+    "q": "Combien font 89 ÷ 1 ?",
+    "a": "89"
+  },
+  {
+    "q": "Combien font 7 × 15 ?",
+    "a": "105"
+  },
+  {
+    "q": "Combien font 795 ÷ 15 ?",
+    "a": "53"
+  },
+  {
+    "q": "Combien font 60 × 7 ?",
+    "a": "420"
+  },
+  {
+    "q": "Combien font 114 ÷ 3 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 267 ÷ 3 ?",
+    "a": "89"
+  },
+  {
+    "q": "Combien font 910 ÷ 26 ?",
+    "a": "35"
+  },
+  {
+    "q": "Combien font 28 ÷ 4 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 12 × 35 ?",
+    "a": "420"
+  },
+  {
+    "q": "Combien font 720 ÷ 8 ?",
+    "a": "90"
+  },
+  {
+    "q": "Combien font 32 ÷ 8 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 95 × 13 ?",
+    "a": "1235"
+  },
+  {
+    "q": "Combien font 88 ÷ 1 ?",
+    "a": "88"
+  },
+  {
+    "q": "Combien font 75 × 10 ?",
+    "a": "750"
+  },
+  {
+    "q": "Combien font 9 × 95 ?",
+    "a": "855"
+  },
+  {
+    "q": "Combien font 738 ÷ 9 ?",
+    "a": "82"
+  },
+  {
+    "q": "Combien font 40 × 20 ?",
+    "a": "800"
+  },
+  {
+    "q": "Combien font 1 × 60 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 183 ÷ 3 ?",
+    "a": "61"
+  },
+  {
+    "q": "Combien font 324 ÷ 4 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 25 × 65 ?",
+    "a": "1625"
+  },
+  {
+    "q": "Combien font 37 ÷ 1 ?",
+    "a": "37"
+  },
+  {
+    "q": "Combien font 12 × 55 ?",
+    "a": "660"
+  },
+  {
+    "q": "Combien font 14 ÷ 7 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 15 × 1 ?",
+    "a": "15"
+  },
+  {
+    "q": "Combien font 3 × 75 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 95 × 9 ?",
+    "a": "855"
+  },
+  {
+    "q": "Combien font 560 ÷ 8 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 885 ÷ 15 ?",
+    "a": "59"
+  },
+  {
+    "q": "Combien font 462 ÷ 7 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 9 × 65 ?",
+    "a": "585"
+  },
+  {
+    "q": "Combien font 2 × 80 ?",
+    "a": "160"
+  },
+  {
+    "q": "Combien font 6 × 75 ?",
+    "a": "450"
+  },
+  {
+    "q": "Combien font 35 × 60 ?",
+    "a": "2100"
+  },
+  {
+    "q": "Combien font 14 × 10 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 693 ÷ 7 ?",
+    "a": "99"
+  },
+  {
+    "q": "Combien font 88 ÷ 2 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 126 ÷ 6 ?",
+    "a": "21"
+  },
+  {
+    "q": "Combien font 60 × 35 ?",
+    "a": "2100"
+  },
+  {
+    "q": "Combien font 5 × 30 ?",
+    "a": "150"
+  },
+  {
+    "q": "Combien font 49 ÷ 7 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 13 × 2 ?",
+    "a": "26"
+  },
+  {
+    "q": "Combien font 657 ÷ 9 ?",
+    "a": "73"
+  },
+  {
+    "q": "Combien font 2 × 12 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 45 × 40 ?",
+    "a": "1800"
+  },
+  {
+    "q": "Combien font 279 ÷ 9 ?",
+    "a": "31"
+  },
+  {
+    "q": "Combien font 990 ÷ 15 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 55 ÷ 5 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 455 ÷ 5 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 84 ÷ 4 ?",
+    "a": "21"
+  },
+  {
+    "q": "Combien font 340 ÷ 4 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 25 × 1 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 44 ÷ 1 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 13 × 4 ?",
+    "a": "52"
+  },
+  {
+    "q": "Combien font 30 × 10 ?",
+    "a": "300"
+  },
+  {
+    "q": "Combien font 158 ÷ 2 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 13 × 8 ?",
+    "a": "104"
+  },
+  {
+    "q": "Combien font 8 × 85 ?",
+    "a": "680"
+  },
+  {
+    "q": "Combien font 4 ÷ 1 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 800 ÷ 100 ?",
+    "a": "8"
+  },
+  {
+    "q": "Combien font 2 × 45 ?",
+    "a": "90"
+  },
+  {
+    "q": "Combien font 153 ÷ 3 ?",
+    "a": "51"
+  },
+  {
+    "q": "Combien font 45 × 45 ?",
+    "a": "2025"
+  },
+  {
+    "q": "Combien font 12 × 50 ?",
+    "a": "600"
+  },
+  {
+    "q": "Combien font 360 ÷ 15 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 66 ÷ 1 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 95 × 35 ?",
+    "a": "3325"
+  },
+  {
+    "q": "Combien font 244 ÷ 4 ?",
+    "a": "61"
+  },
+  {
+    "q": "Combien font 4 ÷ 4 ?",
+    "a": "1"
+  },
+  {
+    "q": "Combien font 11 ÷ 1 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 570 ÷ 10 ?",
+    "a": "57"
+  },
+  {
+    "q": "Combien font 80 × 7 ?",
+    "a": "560"
+  },
+  {
+    "q": "Combien font 6 × 95 ?",
+    "a": "570"
+  },
+  {
+    "q": "Combien font 12 × 2 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 141 ÷ 3 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 24 ÷ 1 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 85 × 4 ?",
+    "a": "340"
+  },
+  {
+    "q": "Combien font 900 ÷ 15 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 25 × 13 ?",
+    "a": "325"
+  },
+  {
+    "q": "Combien font 256 ÷ 8 ?",
+    "a": "32"
+  },
+  {
+    "q": "Combien font 70 × 7 ?",
+    "a": "490"
+  },
+  {
+    "q": "Combien font 400 ÷ 8 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 171 ÷ 9 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 100 × 4 ?",
+    "a": "400"
+  },
+  {
+    "q": "Combien font 95 × 6 ?",
+    "a": "570"
+  },
+  {
+    "q": "Combien font 40 × 40 ?",
+    "a": "1600"
+  },
+  {
+    "q": "Combien font 108 ÷ 3 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 2 × 70 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 70 × 5 ?",
+    "a": "350"
+  },
+  {
+    "q": "Combien font 352 ÷ 4 ?",
+    "a": "88"
+  },
+  {
+    "q": "Combien font 1 × 12 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 55 × 65 ?",
+    "a": "3575"
+  },
+  {
+    "q": "Combien font 174 ÷ 2 ?",
+    "a": "87"
+  },
+  {
+    "q": "Combien font 6 × 11 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 338 ÷ 26 ?",
+    "a": "13"
+  },
+  {
+    "q": "Combien font 54 ÷ 9 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 88 ÷ 8 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 246 ÷ 6 ?",
+    "a": "41"
+  },
+  {
+    "q": "Combien font 12 × 75 ?",
+    "a": "900"
+  },
+  {
+    "q": "Combien font 12 × 20 ?",
+    "a": "240"
+  },
+  {
+    "q": "Combien font 120 ÷ 3 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 150 ÷ 15 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 2 × 8 ?",
+    "a": "16"
+  },
+  {
+    "q": "Combien font 305 ÷ 5 ?",
+    "a": "61"
+  },
+  {
+    "q": "Combien font 10 × 12 ?",
+    "a": "120"
+  },
+  {
+    "q": "Combien font 160 ÷ 4 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 55 × 85 ?",
+    "a": "4675"
+  },
+  {
+    "q": "Combien font 306 ÷ 9 ?",
+    "a": "34"
+  },
+  {
+    "q": "Combien font 10 × 95 ?",
+    "a": "950"
+  },
+  {
+    "q": "Combien font 85 × 85 ?",
+    "a": "7225"
+  },
+  {
+    "q": "Combien font 85 ÷ 5 ?",
+    "a": "17"
+  },
+  {
+    "q": "Combien font 594 ÷ 6 ?",
+    "a": "99"
+  },
+  {
+    "q": "Combien font 264 ÷ 4 ?",
+    "a": "66"
+  },
+  {
+    "q": "Combien font 85 × 70 ?",
+    "a": "5950"
+  },
+  {
+    "q": "Combien font 5 × 15 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 260 ÷ 4 ?",
+    "a": "65"
+  },
+  {
+    "q": "Combien font 25 ÷ 1 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 20 × 50 ?",
+    "a": "1000"
+  },
+  {
+    "q": "Combien font 13 × 65 ?",
+    "a": "845"
+  },
+  {
+    "q": "Combien font 116 ÷ 2 ?",
+    "a": "58"
+  },
+  {
+    "q": "Combien font 567 ÷ 7 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 13 × 7 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 7 × 95 ?",
+    "a": "665"
+  },
+  {
+    "q": "Combien font 180 ÷ 9 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 291 ÷ 3 ?",
+    "a": "97"
+  },
+  {
+    "q": "Combien font 85 × 60 ?",
+    "a": "5100"
+  },
+  {
+    "q": "Combien font 40 ÷ 5 ?",
+    "a": "8"
+  },
+  {
+    "q": "Combien font 80 × 15 ?",
+    "a": "1200"
+  },
+  {
+    "q": "Combien font 780 ÷ 26 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 340 ÷ 10 ?",
+    "a": "34"
+  },
+  {
+    "q": "Combien font 123 ÷ 3 ?",
+    "a": "41"
+  },
+  {
+    "q": "Combien font 395 ÷ 5 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 189 ÷ 3 ?",
+    "a": "63"
+  },
+  {
+    "q": "Combien font 4 × 55 ?",
+    "a": "220"
+  },
+  {
+    "q": "Quel est le carré de 11 ?",
+    "a": "121"
+  },
+  {
+    "q": "Combien font 6 ÷ 3 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 252 ÷ 9 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 384 ÷ 8 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 80 × 3 ?",
+    "a": "240"
+  },
+  {
+    "q": "Combien font 48 ÷ 1 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 100 × 75 ?",
+    "a": "7500"
+  },
+  {
+    "q": "Combien font 55 × 30 ?",
+    "a": "1650"
+  },
+  {
+    "q": "Combien font 128 ÷ 2 ?",
+    "a": "64"
+  },
+  {
+    "q": "Combien font 357 ÷ 7 ?",
+    "a": "51"
+  },
+  {
+    "q": "Combien font 85 × 25 ?",
+    "a": "2125"
+  },
+  {
+    "q": "Combien font 3 × 9 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 440 ÷ 5 ?",
+    "a": "88"
+  },
+  {
+    "q": "Combien font 90 × 15 ?",
+    "a": "1350"
+  },
+  {
+    "q": "Combien font 180 ÷ 5 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 70 × 70 ?",
+    "a": "4900"
+  },
+  {
+    "q": "Combien font 9 × 9 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 30 × 50 ?",
+    "a": "1500"
+  },
+  {
+    "q": "Combien font 80 ÷ 2 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 34 ÷ 1 ?",
+    "a": "34"
+  },
+  {
+    "q": "Combien font 6 × 35 ?",
+    "a": "210"
+  },
+  {
+    "q": "Combien font 120 ÷ 6 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 432 ÷ 6 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 224 ÷ 8 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 55 × 95 ?",
+    "a": "5225"
+  },
+  {
+    "q": "Combien font 90 × 75 ?",
+    "a": "6750"
+  },
+  {
+    "q": "Combien font 35 × 12 ?",
+    "a": "420"
+  },
+  {
+    "q": "Combien font 80 × 1 ?",
+    "a": "80"
+  },
+  {
+    "q": "Combien font 304 ÷ 8 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 55 × 10 ?",
+    "a": "550"
+  },
+  {
+    "q": "Combien font 7 × 8 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 45 × 90 ?",
+    "a": "4050"
+  },
+  {
+    "q": "Combien font 12 × 5 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 11 × 5 ?",
+    "a": "55"
+  },
+  {
+    "q": "Combien font 65 × 1 ?",
+    "a": "65"
+  },
+  {
+    "q": "Combien font 27 ÷ 1 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 162 ÷ 3 ?",
+    "a": "54"
+  },
+  {
+    "q": "Combien font 13 × 14 ?",
+    "a": "182"
+  },
+  {
+    "q": "Combien font 1 × 95 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 546 ÷ 7 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 672 ÷ 7 ?",
+    "a": "96"
+  },
+  {
+    "q": "Combien font 70 × 45 ?",
+    "a": "3150"
+  },
+  {
+    "q": "Combien font 80 × 9 ?",
+    "a": "720"
+  },
+  {
+    "q": "Combien font 9 ÷ 1 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 456 ÷ 6 ?",
+    "a": "76"
+  },
+  {
+    "q": "Combien font 225 ÷ 5 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 60 ÷ 15 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 156 ÷ 2 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 5 × 5 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 2 × 15 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 35 × 25 ?",
+    "a": "875"
+  },
+  {
+    "q": "Combien font 224 ÷ 4 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 656 ÷ 8 ?",
+    "a": "82"
+  },
+  {
+    "q": "Combien font 85 × 45 ?",
+    "a": "3825"
+  },
+  {
+    "q": "Combien font 27 ÷ 3 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 40 × 13 ?",
+    "a": "520"
+  },
+  {
+    "q": "Combien font 168 ÷ 4 ?",
+    "a": "42"
+  },
+  {
+    "q": "Combien font 35 × 5 ?",
+    "a": "175"
+  },
+  {
+    "q": "Combien font 284 ÷ 4 ?",
+    "a": "71"
+  },
+  {
+    "q": "Combien font 240 ÷ 6 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 39 ÷ 1 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 80 × 85 ?",
+    "a": "6800"
+  },
+  {
+    "q": "Combien font 345 ÷ 15 ?",
+    "a": "23"
+  },
+  {
+    "q": "Combien font 8 ÷ 1 ?",
+    "a": "8"
+  },
+  {
+    "q": "Combien font 15 × 14 ?",
+    "a": "210"
+  },
+  {
+    "q": "Combien font 90 ÷ 2 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 315 ÷ 5 ?",
+    "a": "63"
+  },
+  {
+    "q": "Combien font 35 × 8 ?",
+    "a": "280"
+  },
+  {
+    "q": "Combien font 7 × 75 ?",
+    "a": "525"
+  },
+  {
+    "q": "Combien font 161 ÷ 7 ?",
+    "a": "23"
+  },
+  {
+    "q": "Combien font 228 ÷ 4 ?",
+    "a": "57"
+  },
+  {
+    "q": "Combien font 95 × 75 ?",
+    "a": "7125"
+  },
+  {
+    "q": "Combien font 273 ÷ 3 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 65 × 2 ?",
+    "a": "130"
+  },
+  {
+    "q": "Combien font 405 ÷ 15 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 5 × 45 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 105 ÷ 5 ?",
+    "a": "21"
+  },
+  {
+    "q": "Combien font 15 × 50 ?",
+    "a": "750"
+  },
+  {
+    "q": "Combien font 440 ÷ 10 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 40 × 65 ?",
+    "a": "2600"
+  },
+  {
+    "q": "Combien font 62 ÷ 2 ?",
+    "a": "31"
+  },
+  {
+    "q": "Combien font 55 × 50 ?",
+    "a": "2750"
+  },
+  {
+    "q": "Combien font 990 ÷ 10 ?",
+    "a": "99"
+  },
+  {
+    "q": "Combien font 188 ÷ 2 ?",
+    "a": "94"
+  },
+  {
+    "q": "Combien font 2 × 9 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 378 ÷ 6 ?",
+    "a": "63"
+  },
+  {
+    "q": "Combien font 100 × 9 ?",
+    "a": "900"
+  },
+  {
+    "q": "Combien font 78 ÷ 2 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 25 × 7 ?",
+    "a": "175"
+  },
+  {
+    "q": "Combien font 225 ÷ 15 ?",
+    "a": "15"
+  },
+  {
+    "q": "Combien font 11 × 85 ?",
+    "a": "935"
+  },
+  {
+    "q": "Combien font 15 × 15 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 624 ÷ 26 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 255 ÷ 3 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 7 × 40 ?",
+    "a": "280"
+  },
+  {
+    "q": "Combien font 7 × 1 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 534 ÷ 6 ?",
+    "a": "89"
+  },
+  {
+    "q": "Combien font 153 ÷ 9 ?",
+    "a": "17"
+  },
+  {
+    "q": "Combien font 10 × 55 ?",
+    "a": "550"
+  },
+  {
+    "q": "Combien font 15 × 40 ?",
+    "a": "600"
+  },
+  {
+    "q": "Combien font 5 × 50 ?",
+    "a": "250"
+  },
+  {
+    "q": "Combien font 90 × 5 ?",
+    "a": "450"
+  },
+  {
+    "q": "Combien font 70 × 3 ?",
+    "a": "210"
+  },
+  {
+    "q": "Combien font 184 ÷ 4 ?",
+    "a": "46"
+  },
+  {
+    "q": "Combien font 155 ÷ 5 ?",
+    "a": "31"
+  },
+  {
+    "q": "Combien font 56 ÷ 8 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 2 × 1 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 12 × 1 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 616 ÷ 7 ?",
+    "a": "88"
+  },
+  {
+    "q": "Combien font 50 ÷ 5 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 70 × 55 ?",
+    "a": "3850"
+  },
+  {
+    "q": "Combien font 14 × 12 ?",
+    "a": "168"
+  },
+  {
+    "q": "Combien font 384 ÷ 6 ?",
+    "a": "64"
+  },
+  {
+    "q": "Combien font 11 × 7 ?",
+    "a": "77"
+  },
+  {
+    "q": "Combien font 290 ÷ 10 ?",
+    "a": "29"
+  },
+  {
+    "q": "Combien font 72 ÷ 3 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 75 × 30 ?",
+    "a": "2250"
+  },
+  {
+    "q": "Combien font 80 × 55 ?",
+    "a": "4400"
+  },
+  {
+    "q": "Combien font 196 ÷ 7 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 384 ÷ 4 ?",
+    "a": "96"
+  },
+  {
+    "q": "Combien font 4 × 70 ?",
+    "a": "280"
+  },
+  {
+    "q": "Combien font 858 ÷ 26 ?",
+    "a": "33"
+  },
+  {
+    "q": "Combien font 15 × 25 ?",
+    "a": "375"
+  },
+  {
+    "q": "Combien font 423 ÷ 9 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 518 ÷ 7 ?",
+    "a": "74"
+  },
+  {
+    "q": "Combien font 40 ÷ 8 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 146 ÷ 2 ?",
+    "a": "73"
+  },
+  {
+    "q": "Combien font 630 ÷ 10 ?",
+    "a": "63"
+  },
+  {
+    "q": "Combien font 243 ÷ 9 ?",
+    "a": "27"
+  },
+  {
+    "q": "Combien font 90 × 3 ?",
+    "a": "270"
+  },
+  {
+    "q": "Combien font 4 × 3 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 704 ÷ 8 ?",
+    "a": "88"
+  },
+  {
+    "q": "Combien font 60 × 9 ?",
+    "a": "540"
+  },
+  {
+    "q": "Combien font 94 ÷ 2 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 220 ÷ 5 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 28 ÷ 1 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 90 ÷ 3 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 250 ÷ 10 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 25 × 70 ?",
+    "a": "1750"
+  },
+  {
+    "q": "Combien font 8 × 9 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 400 ÷ 5 ?",
+    "a": "80"
+  },
+  {
+    "q": "Combien font 320 ÷ 8 ?",
+    "a": "40"
+  },
+  {
+    "q": "Combien font 345 ÷ 5 ?",
+    "a": "69"
+  },
+  {
+    "q": "Combien font 100 × 55 ?",
+    "a": "5500"
+  },
+  {
+    "q": "Combien font 35 × 90 ?",
+    "a": "3150"
+  },
+  {
+    "q": "Combien font 20 ÷ 2 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 210 ÷ 7 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 460 ÷ 10 ?",
+    "a": "46"
+  },
+  {
+    "q": "Combien font 50 × 65 ?",
+    "a": "3250"
+  },
+  {
+    "q": "Combien font 57 ÷ 1 ?",
+    "a": "57"
+  },
+  {
+    "q": "Combien font 59 ÷ 1 ?",
+    "a": "59"
+  },
+  {
+    "q": "Combien font 380 ÷ 10 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 44 ÷ 4 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 20 × 5 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 364 ÷ 4 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 75 ÷ 15 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 12 × 60 ?",
+    "a": "720"
+  },
+  {
+    "q": "Combien font 13 × 30 ?",
+    "a": "390"
+  },
+  {
+    "q": "Combien font 20 × 7 ?",
+    "a": "140"
+  },
+  {
+    "q": "Combien font 15 × 4 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 680 ÷ 8 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 316 ÷ 4 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 115 ÷ 5 ?",
+    "a": "23"
+  },
+  {
+    "q": "Combien font 20 × 70 ?",
+    "a": "1400"
+  },
+  {
+    "q": "Combien font 100 × 90 ?",
+    "a": "9000"
+  },
+  {
+    "q": "Combien font 12 × 100 ?",
+    "a": "1200"
+  },
+  {
+    "q": "Combien font 3 × 60 ?",
+    "a": "180"
+  },
+  {
+    "q": "Combien font 130 ÷ 26 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 92 ÷ 4 ?",
+    "a": "23"
+  },
+  {
+    "q": "Combien font 150 ÷ 6 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 2 × 75 ?",
+    "a": "150"
+  },
+  {
+    "q": "Combien font 828 ÷ 9 ?",
+    "a": "92"
+  },
+  {
+    "q": "Combien font 50 ÷ 2 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 12 × 14 ?",
+    "a": "168"
+  },
+  {
+    "q": "Combien font 500 ÷ 10 ?",
+    "a": "50"
+  },
+  {
+    "q": "Combien font 105 ÷ 3 ?",
+    "a": "35"
+  },
+  {
+    "q": "Combien font 130 ÷ 10 ?",
+    "a": "13"
+  },
+  {
+    "q": "Combien font 572 ÷ 26 ?",
+    "a": "22"
+  },
+  {
+    "q": "Combien font 75 × 70 ?",
+    "a": "5250"
+  },
+  {
+    "q": "Combien font 35 × 7 ?",
+    "a": "245"
+  },
+  {
+    "q": "Combien font 342 ÷ 9 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 5 × 11 ?",
+    "a": "55"
+  },
+  {
+    "q": "Combien font 272 ÷ 8 ?",
+    "a": "34"
+  },
+  {
+    "q": "Combien font 252 ÷ 6 ?",
+    "a": "42"
+  },
+  {
+    "q": "Combien font 240 ÷ 15 ?",
+    "a": "16"
+  },
+  {
+    "q": "Combien font 30 × 80 ?",
+    "a": "2400"
+  },
+  {
+    "q": "Combien font 432 ÷ 8 ?",
+    "a": "54"
+  },
+  {
+    "q": "Combien font 728 ÷ 8 ?",
+    "a": "91"
+  },
+  {
+    "q": "Combien font 343 ÷ 7 ?",
+    "a": "49"
+  },
+  {
+    "q": "Combien font 40 × 90 ?",
+    "a": "3600"
+  },
+  {
+    "q": "Combien font 70 × 40 ?",
+    "a": "2800"
+  },
+  {
+    "q": "Combien font 80 ÷ 1 ?",
+    "a": "80"
+  },
+  {
+    "q": "Combien font 270 ÷ 6 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 140 ÷ 2 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 69 ÷ 1 ?",
+    "a": "69"
+  },
+  {
+    "q": "Combien font 70 × 100 ?",
+    "a": "7000"
+  },
+  {
+    "q": "Combien font 332 ÷ 4 ?",
+    "a": "83"
+  },
+  {
+    "q": "Combien font 60 × 8 ?",
+    "a": "480"
+  },
+  {
+    "q": "Combien font 480 ÷ 10 ?",
+    "a": "48"
+  },
+  {
+    "q": "Combien font 18 ÷ 6 ?",
+    "a": "3"
+  },
+  {
+    "q": "Combien font 1 ÷ 1 ?",
+    "a": "1"
+  },
+  {
+    "q": "Combien font 205 ÷ 5 ?",
+    "a": "41"
+  },
+  {
+    "q": "Combien font 11 × 70 ?",
+    "a": "770"
+  },
+  {
+    "q": "Combien font 300 ÷ 15 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 434 ÷ 7 ?",
+    "a": "62"
+  },
+  {
+    "q": "Quel est le carré de 5 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 468 ÷ 26 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 70 ÷ 10 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 85 × 2 ?",
+    "a": "170"
+  },
+  {
+    "q": "Combien font 18 ÷ 3 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 595 ÷ 7 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 100 × 40 ?",
+    "a": "4000"
+  },
+  {
+    "q": "Combien font 40 × 95 ?",
+    "a": "3800"
+  },
+  {
+    "q": "Combien font 12 × 10 ?",
+    "a": "120"
+  },
+  {
+    "q": "Combien font 679 ÷ 7 ?",
+    "a": "97"
+  },
+  {
+    "q": "Combien font 6 × 14 ?",
+    "a": "84"
+  },
+  {
+    "q": "Combien font 45 ÷ 5 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 688 ÷ 8 ?",
+    "a": "86"
+  },
+  {
+    "q": "Combien font 50 × 55 ?",
+    "a": "2750"
+  },
+  {
+    "q": "Combien font 56 ÷ 4 ?",
+    "a": "14"
+  },
+  {
+    "q": "Combien font 70 × 6 ?",
+    "a": "420"
+  },
+  {
+    "q": "Combien font 312 ÷ 26 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 441 ÷ 7 ?",
+    "a": "63"
+  },
+  {
+    "q": "Combien font 147 ÷ 7 ?",
+    "a": "21"
+  },
+  {
+    "q": "Combien font 5 × 1 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 14 × 70 ?",
+    "a": "980"
+  },
+  {
+    "q": "Combien font 217 ÷ 7 ?",
+    "a": "31"
+  },
+  {
+    "q": "Combien font 366 ÷ 6 ?",
+    "a": "61"
+  },
+  {
+    "q": "Combien font 7 × 7 ?",
+    "a": "49"
+  },
+  {
+    "q": "Combien font 60 × 65 ?",
+    "a": "3900"
+  },
+  {
+    "q": "Combien font 90 × 30 ?",
+    "a": "2700"
+  },
+  {
+    "q": "Combien font 95 × 20 ?",
+    "a": "1900"
+  },
+  {
+    "q": "Combien font 2 ÷ 1 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 86 ÷ 1 ?",
+    "a": "86"
+  },
+  {
+    "q": "Combien font 414 ÷ 9 ?",
+    "a": "46"
+  },
+  {
+    "q": "Combien font 770 ÷ 10 ?",
+    "a": "77"
+  },
+  {
+    "q": "Combien font 55 × 13 ?",
+    "a": "715"
+  },
+  {
+    "q": "Combien font 5 × 12 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 90 × 14 ?",
+    "a": "1260"
+  },
+  {
+    "q": "Combien font 525 ÷ 15 ?",
+    "a": "35"
+  },
+  {
+    "q": "Combien font 135 ÷ 3 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 70 × 90 ?",
+    "a": "6300"
+  },
+  {
+    "q": "Combien font 75 × 75 ?",
+    "a": "5625"
+  },
+  {
+    "q": "Combien font 80 ÷ 5 ?",
+    "a": "16"
+  },
+  {
+    "q": "Combien font 70 × 12 ?",
+    "a": "840"
+  },
+  {
+    "q": "Combien font 1 × 15 ?",
+    "a": "15"
+  },
+  {
+    "q": "Combien font 365 ÷ 5 ?",
+    "a": "73"
+  },
+  {
+    "q": "Combien font 14 ÷ 2 ?",
+    "a": "7"
+  },
+  {
+    "q": "Combien font 520 ÷ 8 ?",
+    "a": "65"
+  },
+  {
+    "q": "Combien font 90 × 100 ?",
+    "a": "9000"
+  },
+  {
+    "q": "Combien font 3 × 2 ?",
+    "a": "6"
+  },
+  {
+    "q": "Combien font 8 × 20 ?",
+    "a": "160"
+  },
+  {
+    "q": "Combien font 240 ÷ 10 ?",
+    "a": "24"
+  },
+  {
+    "q": "Combien font 236 ÷ 4 ?",
+    "a": "59"
+  },
+  {
+    "q": "Combien font 60 × 95 ?",
+    "a": "5700"
+  },
+  {
+    "q": "Combien font 175 ÷ 7 ?",
+    "a": "25"
+  },
+  {
+    "q": "Combien font 14 × 35 ?",
+    "a": "490"
+  },
+  {
+    "q": "Combien font 90 × 2 ?",
+    "a": "180"
+  },
+  {
+    "q": "Combien font 774 ÷ 9 ?",
+    "a": "86"
+  },
+  {
+    "q": "Combien font 75 × 8 ?",
+    "a": "600"
+  },
+  {
+    "q": "Combien font 85 × 11 ?",
+    "a": "935"
+  },
+  {
+    "q": "Combien font 10 × 20 ?",
+    "a": "200"
+  },
+  {
+    "q": "Combien font 152 ÷ 8 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 148 ÷ 4 ?",
+    "a": "37"
+  },
+  {
+    "q": "Combien font 48 ÷ 4 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 100 × 30 ?",
+    "a": "3000"
+  },
+  {
+    "q": "Combien font 40 × 75 ?",
+    "a": "3000"
+  },
+  {
+    "q": "Combien font 5 × 13 ?",
+    "a": "65"
+  },
+  {
+    "q": "Combien font 6 × 12 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 100 × 60 ?",
+    "a": "6000"
+  },
+  {
+    "q": "Combien font 500 ÷ 100 ?",
+    "a": "5"
+  },
+  {
+    "q": "Combien font 24 ÷ 2 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 20 × 25 ?",
+    "a": "500"
+  },
+  {
+    "q": "Combien font 513 ÷ 9 ?",
+    "a": "57"
+  },
+  {
+    "q": "Combien font 525 ÷ 7 ?",
+    "a": "75"
+  },
+  {
+    "q": "Combien font 435 ÷ 5 ?",
+    "a": "87"
+  },
+  {
+    "q": "Combien font 50 × 50 ?",
+    "a": "2500"
+  },
+  {
+    "q": "Combien font 184 ÷ 2 ?",
+    "a": "92"
+  },
+  {
+    "q": "Combien font 329 ÷ 7 ?",
+    "a": "47"
+  },
+  {
+    "q": "Combien font 100 × 95 ?",
+    "a": "9500"
+  },
+  {
+    "q": "Combien font 90 × 7 ?",
+    "a": "630"
+  },
+  {
+    "q": "Combien font 13 × 45 ?",
+    "a": "585"
+  },
+  {
+    "q": "Combien font 240 ÷ 8 ?",
+    "a": "30"
+  },
+  {
+    "q": "Combien font 2 × 50 ?",
+    "a": "100"
+  },
+  {
+    "q": "Combien font 243 ÷ 3 ?",
+    "a": "81"
+  },
+  {
+    "q": "Combien font 53 ÷ 1 ?",
+    "a": "53"
+  },
+  {
+    "q": "Combien font 285 ÷ 3 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 45 × 11 ?",
+    "a": "495"
+  },
+  {
+    "q": "Combien font 15 × 7 ?",
+    "a": "105"
+  },
+  {
+    "q": "Combien font 406 ÷ 7 ?",
+    "a": "58"
+  },
+  {
+    "q": "Combien font 35 × 75 ?",
+    "a": "2625"
+  },
+  {
+    "q": "Combien font 52 ÷ 4 ?",
+    "a": "13"
+  },
+  {
+    "q": "Combien font 3 × 4 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 85 × 6 ?",
+    "a": "510"
+  },
+  {
+    "q": "Combien font 504 ÷ 7 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 480 ÷ 8 ?",
+    "a": "60"
+  },
+  {
+    "q": "Combien font 651 ÷ 7 ?",
+    "a": "93"
+  },
+  {
+    "q": "Combien font 585 ÷ 15 ?",
+    "a": "39"
+  },
+  {
+    "q": "Combien font 190 ÷ 2 ?",
+    "a": "95"
+  },
+  {
+    "q": "Combien font 76 ÷ 2 ?",
+    "a": "38"
+  },
+  {
+    "q": "Combien font 65 ÷ 5 ?",
+    "a": "13"
+  },
+  {
+    "q": "Combien font 385 ÷ 5 ?",
+    "a": "77"
+  },
+  {
+    "q": "Combien font 160 ÷ 10 ?",
+    "a": "16"
+  },
+  {
+    "q": "Combien font 80 × 14 ?",
+    "a": "1120"
+  },
+  {
+    "q": "Combien font 6 × 13 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 100 × 2 ?",
+    "a": "200"
+  },
+  {
+    "q": "Combien font 2 × 100 ?",
+    "a": "200"
+  },
+  {
+    "q": "Combien font 77 ÷ 7 ?",
+    "a": "11"
+  },
+  {
+    "q": "Combien font 324 ÷ 9 ?",
+    "a": "36"
+  },
+  {
+    "q": "Combien font 308 ÷ 7 ?",
+    "a": "44"
+  },
+  {
+    "q": "Combien font 5 × 90 ?",
+    "a": "450"
+  },
+  {
+    "q": "Combien font 14 × 13 ?",
+    "a": "182"
+  },
+  {
+    "q": "Combien font 85 × 1 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 390 ÷ 5 ?",
+    "a": "78"
+  },
+  {
+    "q": "Combien font 237 ÷ 3 ?",
+    "a": "79"
+  },
+  {
+    "q": "Combien font 70 ÷ 5 ?",
+    "a": "14"
+  },
+  {
+    "q": "Combien font 124 ÷ 4 ?",
+    "a": "31"
+  },
+  {
+    "q": "Combien font 168 ÷ 3 ?",
+    "a": "56"
+  },
+  {
+    "q": "Combien font 231 ÷ 7 ?",
+    "a": "33"
+  },
+  {
+    "q": "Combien font 66 ÷ 3 ?",
+    "a": "22"
+  },
+  {
+    "q": "Combien font 360 ÷ 5 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 25 × 9 ?",
+    "a": "225"
+  },
+  {
+    "q": "Combien font 8 × 15 ?",
+    "a": "120"
+  },
+  {
+    "q": "Combien font 160 ÷ 8 ?",
+    "a": "20"
+  },
+  {
+    "q": "Combien font 3 × 14 ?",
+    "a": "42"
+  },
+  {
+    "q": "Combien font 13 × 13 ?",
+    "a": "169"
+  },
+  {
+    "q": "Combien font 6 × 25 ?",
+    "a": "150"
+  },
+  {
+    "q": "Combien font 14 × 2 ?",
+    "a": "28"
+  },
+  {
+    "q": "Combien font 10 × 1 ?",
+    "a": "10"
+  },
+  {
+    "q": "Combien font 14 × 50 ?",
+    "a": "700"
+  },
+  {
+    "q": "Combien font 87 ÷ 1 ?",
+    "a": "87"
+  },
+  {
+    "q": "Combien font 76 ÷ 4 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 210 ÷ 3 ?",
+    "a": "70"
+  },
+  {
+    "q": "Combien font 494 ÷ 26 ?",
+    "a": "19"
+  },
+  {
+    "q": "Combien font 12 × 6 ?",
+    "a": "72"
+  },
+  {
+    "q": "Combien font 54 ÷ 3 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 126 ÷ 7 ?",
+    "a": "18"
+  },
+  {
+    "q": "Combien font 405 ÷ 9 ?",
+    "a": "45"
+  },
+  {
+    "q": "Combien font 36 ÷ 4 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 10 × 13 ?",
+    "a": "130"
+  },
+  {
+    "q": "Combien font 425 ÷ 5 ?",
+    "a": "85"
+  },
+  {
+    "q": "Combien font 40 × 50 ?",
+    "a": "2000"
+  },
+  {
+    "q": "Combien font 54 ÷ 1 ?",
+    "a": "54"
+  },
+  {
+    "q": "Combien font 25 × 60 ?",
+    "a": "1500"
+  },
+  {
+    "q": "Combien font 10 × 11 ?",
+    "a": "110"
+  },
+  {
+    "q": "Combien font 16 ÷ 8 ?",
+    "a": "2"
+  },
+  {
+    "q": "Combien font 30 × 30 ?",
+    "a": "900"
+  },
+  {
+    "q": "Combien font 198 ÷ 2 ?",
+    "a": "99"
+  },
+  {
+    "q": "Combien font 20 ÷ 5 ?",
+    "a": "4"
+  },
+  {
+    "q": "Combien font 40 × 35 ?",
+    "a": "1400"
+  },
+  {
+    "q": "Combien font 196 ÷ 4 ?",
+    "a": "49"
+  },
+  {
+    "q": "Combien font 4 × 90 ?",
+    "a": "360"
+  },
+  {
+    "q": "Combien font 15 × 10 ?",
+    "a": "150"
+  },
+  {
+    "q": "Combien font 960 ÷ 10 ?",
+    "a": "96"
+  },
+  {
+    "q": "Combien font 564 ÷ 6 ?",
+    "a": "94"
+  },
+  {
+    "q": "Combien font 55 × 2 ?",
+    "a": "110"
+  },
+  {
+    "q": "Combien font 295 ÷ 5 ?",
+    "a": "59"
+  },
+  {
+    "q": "Combien font 20 × 9 ?",
+    "a": "180"
+  },
+  {
+    "q": "Combien font 490 ÷ 10 ?",
+    "a": "49"
+  },
+  {
+    "q": "Combien font 180 ÷ 15 ?",
+    "a": "12"
+  },
+  {
+    "q": "Combien font 690 ÷ 10 ?",
+    "a": "69"
+  },
+  {
+    "q": "Combien font 420 ÷ 10 ?",
+    "a": "42"
+  },
+  {
+    "q": "Combien font 6 × 90 ?",
+    "a": "540"
+  },
+  {
+    "q": "Combien font 10 × 40 ?",
+    "a": "400"
+  },
+  {
+    "q": "Combien font 12 × 15 ?",
+    "a": "180"
+  },
+  {
+    "q": "Combien font 9 × 1 ?",
+    "a": "9"
+  },
+  {
+    "q": "Combien font 108 ÷ 2 ?",
+    "a": "54"
+  }
 ]
