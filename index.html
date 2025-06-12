@@ -11,15 +11,18 @@
       background-color: white;
       text-align: center;
     }
+
     header {
       font-size: 2.5em;
       font-weight: bold;
       padding: 20px 0;
     }
+
     .logo span {
       font-family: Verdana, sans-serif;
       display: inline-block;
     }
+
     .logo .r { color: #e74c3c; }
     .logo .e1 { color: #f1c40f; }
     .logo .v { color: #2ecc71; }
@@ -33,21 +36,50 @@
     .logo .h { color: #55efc4; }
     .logo .s2 { color: #6c5ce7; }
 
-    #menu {
-      margin-top: 40px;
+    .greeting {
+      font-size: 1.2em;
+      color: #2a6ebb;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .center-column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preview-image {
+      max-width: 300px;
+      max-height: 200px;
+      border-radius: 8px;
     }
 
     .menu-item {
-      display: block;
-      margin: 15px auto;
-      padding: 15px 25px;
-      font-size: 1.2em;
+      padding: 12px 20px;
+      font-size: 1.1em;
       background-color: #3498db;
       color: white;
       border: none;
       border-radius: 10px;
       text-decoration: none;
-      width: fit-content;
       transition: background-color 0.3s ease;
     }
 
@@ -64,38 +96,52 @@
     <span class="m"> </span><span class="m">M</span><span class="a">a</span><span class="t2">t</span><span class="h">h</span><span class="s2">s</span>
   </header>
 
-  <!-- ✅ Image affichée juste après le titre -->
-  <img src="images/johnny5.png" alt="Johnny5" class="preview-image" />
+  <div class="greeting" id="greeting" style="display: none;">
+    Bonjour, <span id="user-name"></span> !
+  </div>
 
-  <!-- ✅ Message de bienvenue -->
-  <div class="greeting" id="greeting" style="display: none;">Bonjour, <span id="user-name"></span> !</div>
+  <div class="container">
+    <div class="column" id="left-menu"></div>
 
-  <div id="menu">
-    <!-- Les liens de menu seront générés ici -->
+    <div class="center-column">
+      <img src="images/johnny5.jpg" alt="johnny5" class="preview-image" />
+    </div>
+
+    <div class="column" id="right-menu"></div>
   </div>
 
   <script>
-
+    // Affichage du nom de l'utilisateur
     const username = localStorage.getItem('user');
     if (username) {
       document.getElementById('user-name').textContent = username;
       document.getElementById('greeting').style.display = 'block';
     }
 
+    // Chargement du menu
     fetch("menus.json")
       .then(res => res.json())
       .then(data => {
-        const menuDiv = document.getElementById("menu");
-        data.menus.forEach(item => {
+        const left = document.getElementById("left-menu");
+        const right = document.getElementById("right-menu");
+
+        data.menus.forEach((item, index) => {
           const link = document.createElement("a");
           link.href = item.lien;
           link.className = "menu-item";
           link.innerText = item.nom;
-          menuDiv.appendChild(link);
+
+          // Répartition gauche / droite en alternance
+          if (index % 2 === 0) {
+            left.appendChild(link);
+          } else {
+            right.appendChild(link);
+          }
         });
       })
       .catch(error => {
-        document.getElementById("menu").innerText = "Erreur de chargement du menu.";
+        const left = document.getElementById("left-menu");
+        left.innerText = "Erreur de chargement du menu.";
         console.error("Erreur JSON menus :", error);
       });
   </script>
