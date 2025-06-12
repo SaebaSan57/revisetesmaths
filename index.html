@@ -47,9 +47,8 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 30px;
-      padding: 20px;
-      flex-wrap: wrap;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .left-column, .right-column {
@@ -70,8 +69,8 @@
     }
 
     .preview-image {
-      max-width: 300px;
-      max-height: 200px;
+      width: 100%;
+      height: auto;
       border-radius: 8px;
     }
 
@@ -83,11 +82,21 @@
       border: none;
       border-radius: 10px;
       text-decoration: none;
+      width: 80%;
       transition: background-color 0.3s ease;
     }
 
     .menu-item:hover {
       background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-column, .right-column, .center-column {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -104,13 +113,13 @@
   </div>
 
   <div class="container">
-    <div class="column" id="left-menu"></div>
+    <div class="left-column" id="left-menu"></div>
 
     <div class="center-column">
-      <img src="images/johnny5.png" alt="johnny5" class="preview-image" />
+      <img src="images/johnny5.png" alt="Dernière image générée" class="preview-image" />
     </div>
 
-    <div class="column" id="right-menu"></div>
+    <div class="right-column" id="right-menu"></div>
   </div>
 
   <script>
@@ -121,7 +130,7 @@
       document.getElementById('greeting').style.display = 'block';
     }
 
-    // Chargement du menu
+    // Chargement dynamique du menu
     fetch("menus.json")
       .then(res => res.json())
       .then(data => {
@@ -134,7 +143,6 @@
           link.className = "menu-item";
           link.innerText = item.nom;
 
-          // Répartition gauche / droite en alternance
           if (index % 2 === 0) {
             left.appendChild(link);
           } else {
@@ -143,8 +151,7 @@
         });
       })
       .catch(error => {
-        const left = document.getElementById("left-menu");
-        left.innerText = "Erreur de chargement du menu.";
+        document.getElementById("left-menu").textContent = "Erreur de chargement du menu.";
         console.error("Erreur JSON menus :", error);
       });
   </script>
