@@ -47,31 +47,30 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      width: 100%;
-      box-sizing: border-box;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: nowrap;
     }
 
     .left-column, .right-column {
-      width: 25%;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      align-items: center;
-      padding: 10px;
+      align-items: stretch;
+      flex: 1 1 auto;
     }
 
     .center-column {
-      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      flex-shrink: 0;
     }
 
     .preview-image {
-      width: 100%;
+      display: block;
+      max-width: 100%;
       height: auto;
-      border-radius: 8px;
     }
 
     .menu-item {
@@ -82,20 +81,29 @@
       border: none;
       border-radius: 10px;
       text-decoration: none;
-      width: 80%;
       transition: background-color 0.3s ease;
+      text-align: center;
     }
 
     .menu-item:hover {
       background-color: #2980b9;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .container {
         flex-direction: column;
+        align-items: center;
       }
-      .left-column, .right-column, .center-column {
+
+      .left-column, .right-column {
         width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu-item {
+        margin: 5px;
       }
     }
   </style>
