@@ -64,11 +64,24 @@
     <span class="m"> </span><span class="m">M</span><span class="a">a</span><span class="t2">t</span><span class="h">h</span><span class="s2">s</span>
   </header>
 
+  <!-- ✅ Image affichée juste après le titre -->
+  <img src="images/johnny5.png" alt="Johnny5" class="preview-image" />
+
+  <!-- ✅ Message de bienvenue -->
+  <div class="greeting" id="greeting" style="display: none;">Bonjour, <span id="user-name"></span> !</div>
+
   <div id="menu">
     <!-- Les liens de menu seront générés ici -->
   </div>
 
   <script>
+
+    const username = localStorage.getItem('user');
+    if (username) {
+      document.getElementById('user-name').textContent = username;
+      document.getElementById('greeting').style.display = 'block';
+    }
+
     fetch("menus.json")
       .then(res => res.json())
       .then(data => {
