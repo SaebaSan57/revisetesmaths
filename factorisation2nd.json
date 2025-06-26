@@ -1,0 +1,18 @@
+[
+  {
+    "expression": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>25x<msup><mi>x</mi><mn>2</mn></msup> + 20x + 4</mi></mrow></math>",
+    "solution": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>(5x+2)²</mi></mrow></math>"
+  },
+  {
+    "expression": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>12x + 24</mi></mrow></math>",
+    "solution": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>12(x + 2)</mi></mrow></math>"
+  },
+  {
+    "expression": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>9x<msup><mi>x</mi><mn>2</mn></msup> - 12x + 4</mi></mrow></math>",
+    "solution": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>(3x-2)²</mi></mrow></math>"
+  },
+  {
+    "expression": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>36x<msup><mi>x</mi><mn>2</mn></msup> - 49</mi></mrow></math>",
+    "solution": "<math xmlns='http://www.w3.org/1998/Math/MathML'><mrow><mi>(6x-7)(6x+7)</mi></mrow></math>"
+  }
+]

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Factorisation - Seconde</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      text-align: center;
+      padding: 20px;
+    }
+    math {
+      font-size: 1.4em;
+      display: block;
+      margin: 20px auto;
+    }
+    #quiz, #summary {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    input[type="text"] {
+      font-size: 1.2em;
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+    }
+    #countdown {
+      font-size: 2em;
+      margin-top: 50px;
+      color: #e74c3c;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Quiz Factorisation - Niveau Seconde</h1>
+<div id="countdown">Le quiz commence dans 5 secondes...</div>
+
+<div id="quiz">
+  <div id="question"></div>
+  <input type="text" id="answer" placeholder="Saisis ta réponse (ex: (x+2)(x-3))">
+  <div>Temps : <span id="timer">0.00</span> sec</div>
+  <button onclick="submitAnswer()">Valider</button>
+  <div id="score"></div>
+</div>
+
+<div id="summary">
+  <h2>Résultats</h2>
+  <div id="resultMessage"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Expression</th>
+        <th>Ta réponse</th>
+        <th>Bonne réponse</th>
+        <th>Temps</th>
+      </tr>
+    </thead>
+    <tbody id="resultTableBody"></tbody>
+  </table>
+</div>
+
+<script>
+let questions = [];
+let current = 0;
+let results = [];
+let timer = 0;
+let interval;
+
+fetch("factorisation2nd.json")
+  .then(res => res.json())
+  .then(data => {
+    questions = data;
+    launchCountdown();
+  });
+
+function launchCountdown() {
+  let countdown = 5;
+  const countdownDiv = document.getElementById("countdown");
+  const intervalCountdown = setInterval(() => {
+    countdownDiv.textContent = "Le quiz commence dans " + countdown + " secondes...";
+    countdown--;
+    if (countdown < 0) {
+      clearInterval(intervalCountdown);
+      countdownDiv.style.display = "none";
+      document.getElementById("quiz").style.display = "block";
+      startQuestion();
+    }
+  }, 1000);
+}
+
+function startQuestion() {
+  document.getElementById("answer").value = "";
+  document.getElementById("question").innerHTML = questions[current].expression;
+  timer = 0;
+  interval = setInterval(() => {
+    timer += 0.1;
+    document.getElementById("timer").textContent = timer.toFixed(2);
+  }, 100);
+}
+
+function submitAnswer() {
+  clearInterval(interval);
+  const userAnswer = document.getElementById("answer").value.trim();
+  const correctAnswer = questions[current].solution;
+  const isCorrect = userAnswer.replace(/\s/g, '') === correctAnswer.replace(/\s/g, '');
+
+  results.push({
+    expression: questions[current].expression,
+    userAnswer,
+    correctAnswer,
+    time: timer.toFixed(2),
+    correct: isCorrect
+  });
+
+  current++;
+  if (current < questions.length) {
+    startQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("summary").style.display = "block";
+
+  const totalCorrect = results.filter(r => r.correct).length;
+  const totalTime = results.reduce((sum, r) => sum + parseFloat(r.time), 0).toFixed(2);
+
+  document.getElementById("resultMessage").textContent =
+    `Bravo !!! Tu as répondu correctement à ${totalCorrect} questions sur ${results.length} en ${totalTime} secondes.`;
+
+  const tbody = document.getElementById("resultTableBody");
+  results.forEach(r => {
+    const row = document.createElement("tr");
+    row.className = r.correct ? "correct" : "incorrect";
+
+    const tdExpr = document.createElement("td");
+    tdExpr.innerHTML = r.expression;
+    const tdUser = document.createElement("td");
+    tdUser.textContent = r.userAnswer;
+    const tdCorrect = document.createElement("td");
+    tdCorrect.innerHTML = r.correctAnswer;
+    const tdTime = document.createElement("td");
+    tdTime.textContent = r.time + "s";
+
+    row.append(tdExpr, tdUser, tdCorrect, tdTime);
+    tbody.appendChild(row);
+  });
+}
+</script>
+
+</body>
+</html>
