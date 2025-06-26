@@ -3,6 +3,10 @@
     {
       "nom": "Calcul Mental",
       "lien": "load_questions_json.html"
+    },
+    {
+      "nom": "Factorisation",
+      "lien": "factorisation.html"
     }
   ]
 }
