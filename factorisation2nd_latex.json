@@ -1,6 +1,6 @@
 [
   {
-    "expression": "25xx2+ 20x + 4",
+    "expression": "25x²+ 20x + 4",
     "solution": "(5x+2)²"
   },
   {
@@ -8,11 +8,11 @@
     "solution": "12(x + 2)"
   },
   {
-    "expression": "9xx2- 12x + 4",
+    "expression": "9x²- 12x + 4",
     "solution": "(3x-2)²"
   },
   {
-    "expression": "36xx2- 49",
+    "expression": "36x²- 49",
     "solution": "(6x-7)(6x+7)"
   }
 ]
