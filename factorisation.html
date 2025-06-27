@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz Factorisation - Seconde</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
       background: white;
       text-align: center;
       padding: 20px;
-    }
-    math {
-      font-size: 1.4em;
-      display: block;
-      margin: 20px auto;
     }
     #quiz, #summary {
       display: none;
@@ -89,7 +86,7 @@ let results = [];
 let timer = 0;
 let interval;
 
-fetch("factorisation2nd.json")
+fetch("factorisation2nd_latex.json")
   .then(res => res.json())
   .then(data => {
     questions = data;
@@ -113,7 +110,8 @@ function launchCountdown() {
 
 function startQuestion() {
   document.getElementById("answer").value = "";
-  document.getElementById("question").innerHTML = questions[current].expression;
+  document.getElementById("question").innerHTML = `\\(${questions[current].expression}\\)`;
+  MathJax.typeset();
   timer = 0;
   interval = setInterval(() => {
     timer += 0.1;
@@ -159,17 +157,18 @@ function showResults() {
     row.className = r.correct ? "correct" : "incorrect";
 
     const tdExpr = document.createElement("td");
-    tdExpr.innerHTML = r.expression;
+    tdExpr.innerHTML = `\\(${r.expression}\\)`;
     const tdUser = document.createElement("td");
     tdUser.textContent = r.userAnswer;
     const tdCorrect = document.createElement("td");
-    tdCorrect.innerHTML = r.correctAnswer;
+    tdCorrect.innerHTML = `\\(${r.correctAnswer}\\)`;
     const tdTime = document.createElement("td");
     tdTime.textContent = r.time + "s";
 
     row.append(tdExpr, tdUser, tdCorrect, tdTime);
     tbody.appendChild(row);
   });
+  MathJax.typeset();
 }
 </script>
 
