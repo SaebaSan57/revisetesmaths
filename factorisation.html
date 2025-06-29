@@ -17,15 +17,19 @@
       max-width: 700px;
       margin: 0 auto;
     }
-    input[type="text"] {
-      font-size: 1.2em;
-      width: 90%;
+    .choice {
+      display: block;
+      margin: 10px auto;
       padding: 10px;
-      margin-bottom: 20px;
+      font-size: 1.1em;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 90%;
     }
-    button {
-      font-size: 1.2em;
-      padding: 10px 20px;
+    .choice:hover {
+      background-color: #e0e0e0;
     }
     #countdown {
       font-size: 2em;
@@ -57,9 +61,8 @@
 
 <div id="quiz">
   <div id="question"></div>
-  <input type="text" id="answer" placeholder="Saisis ta réponse (ex: (x+2)(x-3))">
+  <div id="choices"></div>
   <div>Temps : <span id="timer">0.00</span> sec</div>
-  <button onclick="submitAnswer()">Valider</button>
   <div id="score"></div>
 </div>
 
@@ -70,7 +73,7 @@
     <thead>
       <tr>
         <th>Expression</th>
-        <th>Ta réponse</th>
+        <th>Réponse choisie</th>
         <th>Bonne réponse</th>
         <th>Temps</th>
       </tr>
@@ -86,7 +89,7 @@ let results = [];
 let timer = 0;
 let interval;
 
-fetch("factorisation2nd_latex.json")
+fetch("factorisation2nd_latex_choices.json")
   .then(res => res.json())
   .then(data => {
     questions = data;
@@ -109,9 +112,18 @@ function launchCountdown() {
 }
 
 function startQuestion() {
-  document.getElementById("answer").value = "";
   document.getElementById("question").innerHTML = `\\(${questions[current].expression}\\)`;
+  const choicesDiv = document.getElementById("choices");
+  choicesDiv.innerHTML = "";
+  questions[current].choices.forEach((choice, index) => {
+    const btn = document.createElement("button");
+    btn.className = "choice";
+    btn.innerHTML = `\\(${choice}\\)`;
+    btn.onclick = () => submitAnswer(index);
+    choicesDiv.appendChild(btn);
+  });
   MathJax.typeset();
+
   timer = 0;
   interval = setInterval(() => {
     timer += 0.1;
@@ -119,14 +131,16 @@ function startQuestion() {
   }, 100);
 }
 
-function submitAnswer() {
+function submitAnswer(selectedIndex) {
   clearInterval(interval);
-  const userAnswer = document.getElementById("answer").value.trim();
-  const correctAnswer = questions[current].solution;
-  const isCorrect = userAnswer.replace(/\s/g, '') === correctAnswer.replace(/\s/g, '');
+  const q = questions[current];
+  const correctIndex = q.answerIndex;
+  const userAnswer = q.choices[selectedIndex];
+  const correctAnswer = q.choices[correctIndex];
+  const isCorrect = selectedIndex === correctIndex;
 
   results.push({
-    expression: questions[current].expression,
+    expression: q.expression,
     userAnswer,
     correctAnswer,
     time: timer.toFixed(2),
@@ -159,7 +173,7 @@ function showResults() {
     const tdExpr = document.createElement("td");
     tdExpr.innerHTML = `\\(${r.expression}\\)`;
     const tdUser = document.createElement("td");
-    tdUser.textContent = r.userAnswer;
+    tdUser.innerHTML = `\\(${r.userAnswer}\\)`;
     const tdCorrect = document.createElement("td");
     tdCorrect.innerHTML = `\\(${r.correctAnswer}\\)`;
     const tdTime = document.createElement("td");
