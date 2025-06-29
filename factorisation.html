@@ -52,6 +52,16 @@
     .incorrect {
       color: red;
     }
+    #revealBtn {
+      font-size: 1.1em;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    #score {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -61,7 +71,8 @@
 
 <div id="quiz">
   <div id="question"></div>
-  <div id="choices"></div>
+  <button id="revealBtn" onclick="revealChoices()">Afficher les réponses</button>
+  <div id="choices" style="display:none;"></div>
   <div>Temps : <span id="timer">0.00</span> sec</div>
   <div id="score"></div>
 </div>
@@ -113,6 +124,19 @@ function launchCountdown() {
 
 function startQuestion() {
   document.getElementById("question").innerHTML = `\\(${questions[current].expression}\\)`;
+  document.getElementById("choices").style.display = "none";
+  document.getElementById("choices").innerHTML = "";
+  document.getElementById("revealBtn").style.display = "inline-block";
+  MathJax.typeset();
+
+  timer = 0;
+  interval = setInterval(() => {
+    timer += 0.1;
+    document.getElementById("timer").textContent = timer.toFixed(2);
+  }, 100);
+}
+
+function revealChoices() {
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
   questions[current].choices.forEach((choice, index) => {
@@ -122,13 +146,9 @@ function startQuestion() {
     btn.onclick = () => submitAnswer(index);
     choicesDiv.appendChild(btn);
   });
+  choicesDiv.style.display = "block";
+  document.getElementById("revealBtn").style.display = "none";
   MathJax.typeset();
-
-  timer = 0;
-  interval = setInterval(() => {
-    timer += 0.1;
-    document.getElementById("timer").textContent = timer.toFixed(2);
-  }, 100);
 }
 
 function submitAnswer(selectedIndex) {
@@ -147,12 +167,18 @@ function submitAnswer(selectedIndex) {
     correct: isCorrect
   });
 
+  updateScore();
   current++;
   if (current < questions.length) {
     startQuestion();
   } else {
     showResults();
   }
+}
+
+function updateScore() {
+  const totalCorrect = results.filter(r => r.correct).length;
+  document.getElementById("score").textContent = `Nombre de bonnes réponses : ${totalCorrect}`;
 }
 
 function showResults() {
