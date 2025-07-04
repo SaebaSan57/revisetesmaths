@@ -62,6 +62,10 @@
       font-size: 1.2em;
       margin-top: 20px;
     }
+    #globalTimer {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +74,7 @@
 <div id="countdown">Le quiz commence dans 5 secondes...</div>
 
 <div id="quiz">
+  <div id="globalTimer">Temps total : <span id="globalTime">0.0</span>s</div>
   <div id="question"></div>
   <button id="revealBtn" onclick="revealChoices()">Afficher les réponses</button>
   <div id="choices" style="display:none;"></div>
@@ -99,11 +104,13 @@ let current = 0;
 let results = [];
 let timer = 0;
 let interval;
+let globalTime = 0;
+let globalInterval;
 
 fetch("factorisation2nd_latex_choices.json")
   .then(res => res.json())
   .then(data => {
-    questions = data;
+    questions = data.sort(() => 0.5 - Math.random()).slice(0, 20);
     launchCountdown();
   });
 
@@ -117,13 +124,17 @@ function launchCountdown() {
       clearInterval(intervalCountdown);
       countdownDiv.style.display = "none";
       document.getElementById("quiz").style.display = "block";
+      globalInterval = setInterval(() => {
+        globalTime += 0.1;
+        document.getElementById("globalTime").textContent = globalTime.toFixed(1);
+      }, 100);
       startQuestion();
     }
   }, 1000);
 }
 
 function startQuestion() {
-  document.getElementById("question").innerHTML = `\\(${questions[current].expression}\\)`;
+  document.getElementById("question").innerHTML = `\(${questions[current].expression}\)`;
   document.getElementById("choices").style.display = "none";
   document.getElementById("choices").innerHTML = "";
   document.getElementById("revealBtn").style.display = "inline-block";
@@ -142,7 +153,7 @@ function revealChoices() {
   questions[current].choices.forEach((choice, index) => {
     const btn = document.createElement("button");
     btn.className = "choice";
-    btn.innerHTML = `\\(${choice}\\)`;
+    btn.innerHTML = `\(${choice}\)`;
     btn.onclick = () => submitAnswer(index);
     choicesDiv.appendChild(btn);
   });
@@ -172,13 +183,14 @@ function submitAnswer(selectedIndex) {
   if (current < questions.length) {
     startQuestion();
   } else {
+    clearInterval(globalInterval);
     showResults();
   }
 }
 
 function updateScore() {
   const totalCorrect = results.filter(r => r.correct).length;
-  document.getElementById("score").textContent = `Nombre de bonnes réponses : ${totalCorrect}`;
+  document.getElementById("score").textContent = `Nombre de bonnes réponses : ${totalCorrect} / ${results.length}`;
 }
 
 function showResults() {
@@ -186,7 +198,7 @@ function showResults() {
   document.getElementById("summary").style.display = "block";
 
   const totalCorrect = results.filter(r => r.correct).length;
-  const totalTime = results.reduce((sum, r) => sum + parseFloat(r.time), 0).toFixed(2);
+  const totalTime = globalTime.toFixed(1);
 
   document.getElementById("resultMessage").textContent =
     `Bravo !!! Tu as répondu correctement à ${totalCorrect} questions sur ${results.length} en ${totalTime} secondes.`;
@@ -197,11 +209,11 @@ function showResults() {
     row.className = r.correct ? "correct" : "incorrect";
 
     const tdExpr = document.createElement("td");
-    tdExpr.innerHTML = `\\(${r.expression}\\)`;
+    tdExpr.innerHTML = `\(${r.expression}\)`;
     const tdUser = document.createElement("td");
-    tdUser.innerHTML = `\\(${r.userAnswer}\\)`;
+    tdUser.innerHTML = `\(${r.userAnswer}\)`;
     const tdCorrect = document.createElement("td");
-    tdCorrect.innerHTML = `\\(${r.correctAnswer}\\)`;
+    tdCorrect.innerHTML = `\(${r.correctAnswer}\)`;
     const tdTime = document.createElement("td");
     tdTime.textContent = r.time + "s";
 
