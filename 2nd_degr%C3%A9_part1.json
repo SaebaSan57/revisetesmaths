@@ -1,0 +1,422 @@
+[
+  {
+    "type": "qcm",
+    "question": "Une fonction polynome de second degré est un?",
+    "choices": [
+      {
+        "type": "text",
+        "value": "binome"
+      },
+      {
+        "type": "text",
+        "value": "trinome"
+      }
+    ],
+    "answers": [
+      0
+    ]
+  },
+    {
+    "type": "qcm",
+    "question": "Quelle affirmation est vrai ? Une fonction polynome de second degré f(x)=ax²+bx+c?",
+    "choices": [
+      {
+        "type": "text",
+        "value": "a, b et c sont des réels <> 0"
+      },
+      {
+        "type": "text",
+        "value": "a, b et c sont des réels avec a <> 0"
+      },    
+      {
+        "type": "text",
+        "value": "b et c ne peuvent pas être négatifs"
+      },  
+      {
+        "type": "text",
+        "value": "a est toujouts positif"
+      }
+    ],
+    "answers": [
+      1
+    ]
+  },
+    {
+    "type": "qcm",
+    "question": "3x²+7 est un trinome",
+    "choices": [
+      {
+        "type": "text",
+        "value": "Vrai"
+      },
+      {
+        "type": "text",
+        "value": "Faux"
+      }    
+    ],
+    "answers": [
+      0
+    ]
+  },
+    {
+    "type": "qcm",
+    "question": "-5x+5 est un trinome",
+    "choices": [
+      {
+        "type": "text",
+        "value": "Vrai"
+      },
+      {
+        "type": "text",
+        "value": "Faux"
+      }    
+    ],
+    "answers": [
+      1
+    ],
+    "explanation":[
+      "fonction affine"
+    ]
+  },
+    {
+    "type": "qcm",
+    "question": "4+2x² est un trinome",
+    "choices": [
+      {
+        "type": "text",
+        "value": "Vrai"
+      },
+      {
+        "type": "text",
+        "value": "Faux"
+      }    
+    ],
+    "answers": [
+      0
+    ]
+  },   
+    {
+    "type": "qcm",
+    "question": "5x⁴+3x-2 est un trinome",
+    "choices": [
+      {
+        "type": "text",
+        "value": "Vrai"
+      },
+      {
+        "type": "text",
+        "value": "Faux"
+      }    
+    ],
+    "answers": [
+      1
+    ],
+    "explanation":[
+      "polynome de degré 4"
+    ]
+  },
+    {
+    "type": "qcm",
+    "question": "La forme canonique d'un trinome f(x)=ax²+bx+c s'écrit sous la forme",
+    "choices": [
+      {
+        "type": "text",
+        "value": "f(x)=(x-α)²+β"
+      },
+      {
+        "type": "text",
+        "value": "f(x)=a(x+α)²-β"
+      },      
+      {
+        "type": "text",
+        "value": "f(x)=a(x-α)²+β"
+      },      
+      {
+        "type": "text",
+        "value": "f(x)=a(x-α)²-β"
+      }      
+    ],
+    "answers": [
+      2
+    ]
+  },  
+    {
+    "type": "qcm",
+    "question": "Dans la forme canonique quelle est la valeur de α",
+    "choices": [
+      {
+        "type": "text",
+        "value": "b/2a"
+      },
+      {
+        "type": "text",
+        "value": "-b/2a"
+      },      
+      {
+        "type": "text",
+        "value": "2b/a"
+      },      
+      {
+        "type": "text",
+        "value": "-2b/a"
+      }      
+    ],
+    "answers": [
+      1
+    ]
+  }, 
+      {
+    "type": "qcm",
+    "question": "Dans la forme canonique quelle est la valeur de β",
+    "choices": [
+      {
+        "type": "text",
+        "value": "(b²-ac)/4a"
+      },
+      {
+        "type": "text",
+        "value": "(b-4ac)²/4a"
+      },      
+      {
+        "type": "text",
+        "value": "(4b²-4ac)/a"
+      },      
+      {
+        "type": "text",
+        "value": "((b-2a)(b+2c))/4a"
+      }      
+    ],
+    "answers": [
+      1
+    ]
+  }, 
+    {
+    "type": "qcm",
+    "question": "Le sens de la courbe d'une fonction polynome de second degré est fonction de ",
+    "choices": [
+      {
+        "type": "text",
+        "value": "a"
+      },
+      {
+        "type": "text",
+        "value": "a²"
+      },      
+      {
+        "type": "text",
+        "value": "b si a=0"
+      },      
+      {
+        "type": "text",
+        "value": "-a"
+      }      
+    ],
+    "answers": [
+      0
+    ]
+  },  
+  {
+    "type": "multiple",
+    "question": "La parabole est orientée vers le bas si ",
+    "choices": [
+      {
+        "type": "text",
+        "value": "a < 0"
+      },
+      {
+        "type": "text",
+        "value": "a > 0"
+      },
+      {
+        "type": "text",
+        "value": "son sommet est un maximum"
+      },
+      {
+        "type": "text",
+        "value": "son sommet est un minimum"        
+      }
+    ],
+    "answers": [
+      0,
+      2
+    ]
+  },   
+  {
+    "type": "multiple",
+    "question": "La parabole est orientée vers le haut si ",
+    "choices": [
+      {
+        "type": "text",
+        "value": "a > 0"
+      },
+      {
+        "type": "text",
+        "value": "a = 0 et b > 0"
+      },
+      {
+        "type": "text",
+        "value": "son sommet est un minimum"
+      },
+      {
+        "type": "text",
+        "value": "elle est décroissante puis croissante"        
+      }
+    ],
+    "answers": [
+      0,
+      2,
+      3
+    ]
+  }, 
+  {
+    "type":"qcm",
+    "question_img": "Image_parabole_1.jpg",
+    "question": "Cette parabole est ?",    
+    "choices": [
+        {
+        "type": "text",
+        "value": "orientée vers le haut"
+      },
+      {
+        "type": "text",
+        "value": "orientée vers le bas"        
+      }
+    ],
+    "answers": [
+      0
+    ]
+  },
+  {
+    "type":"qcm",
+    "question": "Pour calculer un extremum ",    
+    "choices": [
+        {
+        "type": "text",
+        "value": "on utilise la forme polynomiale"
+      },
+      {
+        "type": "text",
+        "value": "on utilise la forme canonique"        
+      }
+    ],
+    "answers": [
+      1
+    ]
+  },
+    {
+    "type": "multiple",
+    "question": "Si une fonction polynôme du second degré est définie par f(x) = a(x-α)²+β avec a>0 alors ",
+    "choices": [
+      {
+        "type": "text",
+        "value": "le minimum est égal à β"
+      },
+      {
+        "type": "text",
+        "value": "le maximum est égal à α"
+      },
+      {
+        "type": "text",
+        "value": "f admet un extremum en β"
+      },
+      {
+        "type": "text",
+        "value": "f admet un extremum en α"      
+      }
+    ],
+    "answers": [
+      0,
+      2
+    ]
+  }, 
+      {
+    "type": "multiple",
+    "question": "Exprime l'extremum selon a et b d'une parabole définie par la fonction polynôme du second degré définie par f(x) = a(x-α)²+β avec a<>0 ",
+    "choices": [
+      {
+        "type": "text",
+        "value": "α = -b/2a"
+      },
+      {
+        "type": "text",
+        "value": "α = -(b²-4ac)/4a"
+      },
+      {
+        "type": "text",
+        "value": "α = 0 si a = 0"
+      },
+      {
+        "type": "text",
+        "value": "α = 0 si b = 0"
+      },
+      {
+        "type": "text",
+        "value": "β = f(-(b²-4ac)/4a)"
+      },      
+      {
+        "type": "text",
+        "value": "β = f(-b/2a)"
+      },  
+      {
+        "type": "text",
+        "value": "β = c si b = 0"      
+      }
+    ],
+    "answers": [
+      0,
+      3,
+      5,
+      6
+    ]
+  }, 
+    {
+    "type":"qcm",
+    "question": "Le sommet d'une parabole définie par la fonction polynôme du second degré définie par f(x) = a(x-α)²+β avec a<>0 est ",    
+    "choices": [
+      {
+        "type": "text",
+        "value": "le point (α,β)"
+      },
+      {
+        "type": "text",
+        "value": "le point (β,α)"
+      },
+      {
+        "type": "text",
+        "value": "le point ((α/2,β)"
+      },
+      {
+        "type": "text",
+        "value": "le point (β,α/2)"
+      }
+    ],
+    "answers": [
+      1
+    ]
+  },
+    {
+    "type":"qcm",
+    "question": "L'axe de symétrie d'une parabole définie par la fonction polynôme du second degré définie par f(x) = a(x-α)²+β avec a<>0 est ",    
+    "choices": [
+      {
+        "type": "text",
+        "value": "la droite d'équation x=β"
+      },
+      {
+        "type": "text",
+        "value": "la droite d'équation y=β"
+      },
+      {
+        "type": "text",
+        "value": "la droite d'équation x=α"
+      },
+      {
+        "type": "text",
+        "value": "la droite d'équation y=α/"
+      }
+    ],
+    "answers": [
+      2
+    ]
+  }
+]

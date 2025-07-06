@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - Second Degré (Partie 1)</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: white; text-align: center; padding: 20px; }
+    #quiz, #summary { display: none; max-width: 700px; margin: 0 auto; }
+    .choice { display: block; text-align: left; margin: 10px auto; padding: 10px; font-size: 1em; }
+    .choice input { margin-right: 10px; }
+    #timer { font-weight: bold; }
+    .correct { color: green; }
+    .incorrect { color: red; }
+    img { max-height: 100px; margin: 10px auto; }
+    .question-img { margin: 10px auto; max-width: 80%; }
+  </style>
+</head>
+<body>
+
+<h1>Quiz - Second Degré (Partie 1)</h1>
+<p>Temps écoulé : <span id="timer">0.0</span> s</p>
+<div id="quiz">
+  <div id="question-container"></div>
+  <button onclick="submitAnswer()">Valider</button>
+  <div id="score"></div>
+</div>
+
+<div id="summary">
+  <h2>Résultats</h2>
+  <div id="resultMessage"></div>
+  <ul id="resultsList"></ul>
+</div>
+
+<script>
+let questions = [];
+let current = 0;
+let score = 0;
+let interval;
+let timer = 0;
+let responses = [];
+
+fetch("2nd_degré_part1.json")
+  .then(res => res.json())
+  .then(data => {
+    questions = data;
+    document.getElementById("quiz").style.display = "block";
+    startTimer();
+    showQuestion();
+  });
+
+function startTimer() {
+  interval = setInterval(() => {
+    timer += 0.1;
+    document.getElementById("timer").textContent = timer.toFixed(1);
+  }, 100);
+}
+
+function showQuestion() {
+  const container = document.getElementById("question-container");
+  container.innerHTML = "";
+  const q = questions[current];
+
+  if (q.question_img) {
+    const img = document.createElement("img");
+    img.src = q.question_img;
+    img.alt = "image question";
+    img.className = "question-img";
+    container.appendChild(img);
+  }
+
+  const p = document.createElement("p");
+  p.innerHTML = q.question;
+  container.appendChild(p);
+
+  if (q.type === "qcm" || q.type === "multiple") {
+    q.choices.forEach((choice, i) => {
+      const div = document.createElement("div");
+      div.className = "choice";
+      const input = document.createElement("input");
+      input.type = (q.type === "qcm") ? "radio" : "checkbox";
+      input.name = "answer";
+      input.value = i;
+      div.appendChild(input);
+
+      if (choice.type === "text") {
+        const label = document.createElement("label");
+        label.textContent = choice.value;
+        div.appendChild(label);
+      } else if (choice.type === "img") {
+        const img = document.createElement("img");
+        img.src = choice.src;
+        img.alt = "Réponse image";
+        div.appendChild(img);
+      }
+
+      container.appendChild(div);
+    });
+  } else if (q.type === "input") {
+    const input = document.createElement("input");
+    input.type = "text";
+    input.id = "free-answer";
+    input.placeholder = "Ta réponse";
+    container.appendChild(input);
+  }
+
+  MathJax.typeset();
+}
+
+function submitAnswer() {
+  const q = questions[current];
+  let correct = false;
+  let userResponse;
+
+  if (q.type === "qcm") {
+    const checked = document.querySelector("input[name='answer']:checked");
+    if (!checked) return alert("Sélectionne une réponse !");
+    userResponse = parseInt(checked.value);
+    correct = q.answers.includes(userResponse);
+  } else if (q.type === "multiple") {
+    const checkboxes = document.querySelectorAll("input[name='answer']:checked");
+    const selected = Array.from(checkboxes).map(cb => parseInt(cb.value)).sort();
+    const expected = q.answers.slice().sort();
+    userResponse = selected;
+    correct = JSON.stringify(selected) === JSON.stringify(expected);
+  } else if (q.type === "input") {
+    const input = document.getElementById("free-answer");
+    if (!input.value) return alert("Entre une réponse !");
+    userResponse = input.value.trim();
+    correct = userResponse.replace(/\s/g, '') === q.answer.replace(/\s/g, '');
+  }
+
+  if (correct) score++;
+
+  responses.push({
+    question: q.question,
+    response: userResponse,
+    correct: correct,
+    expected: q.answer || q.answers
+  });
+
+  current++;
+  document.getElementById("score").textContent = `Score : ${score} / ${current}`;
+
+  if (current < questions.length) {
+    showQuestion();
+  } else {
+    clearInterval(interval);
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("summary").style.display = "block";
+
+  document.getElementById("resultMessage").innerHTML =
+    `Bravo ! Tu as obtenu ${score} bonnes réponses sur ${questions.length} en ${timer.toFixed(1)} secondes.`;
+
+  const list = document.getElementById("resultsList");
+  list.innerHTML = "";
+
+  responses.forEach((r, i) => {
+    const li = document.createElement("li");
+    li.className = r.correct ? "correct" : "incorrect";
+    li.textContent = `Q${i + 1} : ${r.question} → Ta réponse : ${r.response}`;
+    list.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>
