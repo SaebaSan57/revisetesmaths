@@ -6,167 +6,258 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; background: white; text-align: center; padding: 20px; }
-    #quiz, #summary { display: none; max-width: 700px; margin: 0 auto; }
-    .choice { display: block; text-align: left; margin: 10px auto; padding: 10px; font-size: 1em; }
-    .choice input { margin-right: 10px; }
-    #timer { font-weight: bold; }
-    .correct { color: green; }
-    .incorrect { color: red; }
-    img { max-height: 100px; margin: 10px auto; }
-    .question-img { margin: 10px auto; max-width: 80%; }
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #quiz, #summary {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .choice {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 1.1em;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 90%;
+      text-align: left;
+    }
+    .choice:hover {
+      background-color: #e0e0e0;
+    }
+    #countdown {
+      font-size: 2em;
+      margin-top: 50px;
+      color: #e74c3c;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    #revealBtn {
+      font-size: 1.1em;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    #score {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    #globalTimer {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
 <h1>Quiz - Second Degré (Partie 1)</h1>
-<p>Temps écoulé : <span id="timer">0.0</span> s</p>
+<div id="countdown">Le quiz commence dans 5 secondes...</div>
+
 <div id="quiz">
-  <div id="question-container"></div>
-  <button onclick="submitAnswer()">Valider</button>
+  <div id="globalTimer">Temps total : <span id="globalTime">0.0</span>s</div>
+  <div id="question"></div>
+  <button id="revealBtn" onclick="revealChoices()">Afficher les réponses</button>
+  <div id="choices" style="display:none;"></div>
+  <div>Temps : <span id="timer">0.00</span> sec</div>
   <div id="score"></div>
 </div>
 
 <div id="summary">
   <h2>Résultats</h2>
   <div id="resultMessage"></div>
-  <ul id="resultsList"></ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Réponse</th>
+        <th>Bonne réponse</th>
+        <th>Temps</th>
+      </tr>
+    </thead>
+    <tbody id="resultTableBody"></tbody>
+  </table>
 </div>
 
 <script>
 let questions = [];
 let current = 0;
-let score = 0;
-let interval;
+let results = [];
 let timer = 0;
-let responses = [];
+let interval;
+let globalTime = 0;
+let globalInterval;
 
-fetch("2nd_degrés_part1.json")
+fetch("2nd_degré_part1.json")
   .then(res => res.json())
   .then(data => {
     questions = data;
-    document.getElementById("quiz").style.display = "block";
-    startTimer();
-    showQuestion();
+    launchCountdown();
   });
 
-function startTimer() {
+function launchCountdown() {
+  let countdown = 5;
+  const countdownDiv = document.getElementById("countdown");
+  const intervalCountdown = setInterval(() => {
+    countdownDiv.textContent = "Le quiz commence dans " + countdown + " secondes...";
+    countdown--;
+    if (countdown < 0) {
+      clearInterval(intervalCountdown);
+      countdownDiv.style.display = "none";
+      document.getElementById("quiz").style.display = "block";
+      globalInterval = setInterval(() => {
+        globalTime += 0.1;
+        document.getElementById("globalTime").textContent = globalTime.toFixed(1);
+      }, 100);
+      startQuestion();
+    }
+  }, 1000);
+}
+
+function startQuestion() {
+  const q = questions[current];
+  let html = "";
+  if (q.question_img) {
+    html += `<img src="${q.question_img}" alt="Image question" style="max-width:90%; margin:10px auto;">`;
+  }
+  html += `<p>${q.question}</p>`;
+  document.getElementById("question").innerHTML = html;
+
+  document.getElementById("choices").style.display = "none";
+  document.getElementById("choices").innerHTML = "";
+  document.getElementById("revealBtn").style.display = "inline-block";
+  MathJax.typeset();
+
+  timer = 0;
   interval = setInterval(() => {
     timer += 0.1;
-    document.getElementById("timer").textContent = timer.toFixed(1);
+    document.getElementById("timer").textContent = timer.toFixed(2);
   }, 100);
 }
 
-function showQuestion() {
-  const container = document.getElementById("question-container");
-  container.innerHTML = "";
+function revealChoices() {
   const q = questions[current];
-
-  if (q.question_img) {
-    const img = document.createElement("img");
-    img.src = q.question_img;
-    img.alt = "image question";
-    img.className = "question-img";
-    container.appendChild(img);
-  }
-
-  const p = document.createElement("p");
-  p.innerHTML = q.question;
-  container.appendChild(p);
+  const choicesDiv = document.getElementById("choices");
+  choicesDiv.innerHTML = "";
 
   if (q.type === "qcm" || q.type === "multiple") {
-    q.choices.forEach((choice, i) => {
+    q.choices.forEach((choice, index) => {
       const div = document.createElement("div");
       div.className = "choice";
-      const input = document.createElement("input");
-      input.type = (q.type === "qcm") ? "radio" : "checkbox";
-      input.name = "answer";
-      input.value = i;
-      div.appendChild(input);
-
-      if (choice.type === "text") {
-        const label = document.createElement("label");
-        label.textContent = choice.value;
-        div.appendChild(label);
-      } else if (choice.type === "img") {
-        const img = document.createElement("img");
-        img.src = choice.src;
-        img.alt = "Réponse image";
-        div.appendChild(img);
-      }
-
-      container.appendChild(div);
+      div.onclick = () => submitAnswer(index);
+      div.innerHTML = choice.type === "text" ? choice.value : `<img src="${choice.src}" alt="Réponse image" style="max-height:100px">`;
+      choicesDiv.appendChild(div);
     });
   } else if (q.type === "input") {
     const input = document.createElement("input");
     input.type = "text";
     input.id = "free-answer";
     input.placeholder = "Ta réponse";
-    container.appendChild(input);
+    choicesDiv.appendChild(input);
+
+    const btn = document.createElement("button");
+    btn.textContent = "Valider";
+    btn.onclick = () => submitAnswer(null);
+    choicesDiv.appendChild(btn);
   }
 
+  choicesDiv.style.display = "block";
+  document.getElementById("revealBtn").style.display = "none";
   MathJax.typeset();
 }
 
-function submitAnswer() {
+function submitAnswer(selectedIndex) {
+  clearInterval(interval);
   const q = questions[current];
   let correct = false;
-  let userResponse;
+  let userResponse = "";
+  let correctAnswer = "";
 
   if (q.type === "qcm") {
-    const checked = document.querySelector("input[name='answer']:checked");
-    if (!checked) return alert("Sélectionne une réponse !");
-    userResponse = parseInt(checked.value);
-    correct = q.answers.includes(userResponse);
+    userResponse = q.choices[selectedIndex].type === "text" ? q.choices[selectedIndex].value : q.choices[selectedIndex].src;
+    correctAnswer = q.answers.map(i => q.choices[i].type === "text" ? q.choices[i].value : q.choices[i].src).join(", ");
+    correct = q.answers.includes(selectedIndex);
   } else if (q.type === "multiple") {
-    const checkboxes = document.querySelectorAll("input[name='answer']:checked");
-    const selected = Array.from(checkboxes).map(cb => parseInt(cb.value)).sort();
-    const expected = q.answers.slice().sort();
-    userResponse = selected;
-    correct = JSON.stringify(selected) === JSON.stringify(expected);
+    userResponse = "(choix multiples non traités ici)";
+    correctAnswer = "(à venir)";
   } else if (q.type === "input") {
     const input = document.getElementById("free-answer");
-    if (!input.value) return alert("Entre une réponse !");
     userResponse = input.value.trim();
+    correctAnswer = q.answer;
     correct = userResponse.replace(/\s/g, '') === q.answer.replace(/\s/g, '');
   }
 
-  if (correct) score++;
-
-  responses.push({
-    question: q.question,
-    response: userResponse,
-    correct: correct,
-    expected: q.answer || q.answers
+  results.push({
+    expression: q.question,
+    userAnswer: userResponse,
+    correctAnswer: correctAnswer,
+    time: timer.toFixed(2),
+    correct: correct
   });
 
+  updateScore();
   current++;
-  document.getElementById("score").textContent = `Score : ${score} / ${current}`;
-
   if (current < questions.length) {
-    showQuestion();
+    startQuestion();
   } else {
-    clearInterval(interval);
+    clearInterval(globalInterval);
     showResults();
   }
+}
+
+function updateScore() {
+  const totalCorrect = results.filter(r => r.correct).length;
+  document.getElementById("score").textContent = `Nombre de bonnes réponses : ${totalCorrect} / ${results.length}`;
 }
 
 function showResults() {
   document.getElementById("quiz").style.display = "none";
   document.getElementById("summary").style.display = "block";
 
-  document.getElementById("resultMessage").innerHTML =
-    `Bravo ! Tu as obtenu ${score} bonnes réponses sur ${questions.length} en ${timer.toFixed(1)} secondes.`;
+  const totalCorrect = results.filter(r => r.correct).length;
+  const totalTime = globalTime.toFixed(1);
 
-  const list = document.getElementById("resultsList");
-  list.innerHTML = "";
+  document.getElementById("resultMessage").textContent =
+    `Bravo !!! Tu as répondu correctement à ${totalCorrect} questions sur ${results.length} en ${totalTime} secondes.`;
 
-  responses.forEach((r, i) => {
-    const li = document.createElement("li");
-    li.className = r.correct ? "correct" : "incorrect";
-    li.textContent = `Q${i + 1} : ${r.question} → Ta réponse : ${r.response}`;
-    list.appendChild(li);
+  const tbody = document.getElementById("resultTableBody");
+  results.forEach(r => {
+    const row = document.createElement("tr");
+    row.className = r.correct ? "correct" : "incorrect";
+
+    const tdExpr = document.createElement("td");
+    tdExpr.innerHTML = r.expression;
+    const tdUser = document.createElement("td");
+    tdUser.innerHTML = r.userAnswer;
+    const tdCorrect = document.createElement("td");
+    tdCorrect.innerHTML = r.correctAnswer;
+    const tdTime = document.createElement("td");
+    tdTime.textContent = r.time + "s";
+
+    row.append(tdExpr, tdUser, tdCorrect, tdTime);
+    tbody.appendChild(row);
   });
+  MathJax.typeset();
 }
 </script>
 
