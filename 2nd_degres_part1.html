@@ -12,11 +12,6 @@
       text-align: center;
       padding: 20px;
     }
-    #quiz, #summary {
-      display: none;
-      max-width: 700px;
-      margin: 0 auto;
-    }
     .choice {
       display: block;
       margin: 10px auto;
@@ -29,13 +24,41 @@
       width: 90%;
       text-align: left;
     }
-    .choice:hover {
-      background-color: #e0e0e0;
+    .correct-choice {
+      background-color: #d4edda !important;
+      color: green;
+    }
+    .incorrect-choice {
+      background-color: #f8d7da !important;
+      color: red;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 1.3em;
+    }
+    .feedback.correct {
+      color: green;
+    }
+    .feedback.incorrect {
+      color: red;
+    }
+    #quiz, #summary {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
     }
     #countdown {
       font-size: 2em;
       margin-top: 50px;
       color: #e74c3c;
+    }
+    #globalTimer {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    #choices {
+      margin-top: 15px;
     }
     table {
       width: 100%;
@@ -53,20 +76,6 @@
     .incorrect {
       color: red;
     }
-    #revealBtn {
-      font-size: 1.1em;
-      padding: 10px 20px;
-      margin-top: 15px;
-      cursor: pointer;
-    }
-    #score {
-      font-size: 1.2em;
-      margin-top: 20px;
-    }
-    #globalTimer {
-      margin-top: 10px;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
@@ -77,9 +86,11 @@
 <div id="quiz">
   <div id="globalTimer">Temps total : <span id="globalTime">0.0</span>s</div>
   <div id="question"></div>
-  <button id="revealBtn" onclick="revealChoices()">Afficher les réponses</button>
-  <div id="choices" style="display:none;"></div>
+  <div id="choices"></div>
+  <button id="validateBtn" style="display:none;" onclick="submitAnswer()">Valider mes réponses</button>
   <div>Temps : <span id="timer">0.00</span> sec</div>
+  <div id="feedback" class="feedback"></div>
+  <button id="nextBtn" style="display:none;" onclick="nextQuestion()">Passer à la question suivante</button>
   <div id="score"></div>
 </div>
 
@@ -108,7 +119,7 @@ let interval;
 let globalTime = 0;
 let globalInterval;
 
-fetch("2nd_degres_part1.json")
+fetch("2nd_degré_part1.json")
   .then(res => res.json())
   .then(data => {
     questions = data;
@@ -135,77 +146,84 @@ function launchCountdown() {
 }
 
 function startQuestion() {
+  clearInterval(interval);
   const q = questions[current];
-  let html = "";
-  if (q.question_img) {
-    html += `<img src="${q.question_img}" alt="Image question" style="max-width:90%; margin:10px auto;">`;
-  }
-  html += `<p>${q.question}</p>`;
-  document.getElementById("question").innerHTML = html;
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("nextBtn").style.display = "none";
+  document.getElementById("validateBtn").style.display = "none";
 
-  document.getElementById("choices").style.display = "none";
-  document.getElementById("choices").innerHTML = "";
-  document.getElementById("revealBtn").style.display = "inline-block";
-  MathJax.typeset();
+  let questionHTML = q.question_img ? `<img src="${q.question_img}" alt="Question" style="max-width:90%;"><br>` : "";
+  questionHTML += `<p>${q.question}</p>`;
+  document.getElementById("question").innerHTML = questionHTML;
+
+  const choicesDiv = document.getElementById("choices");
+  choicesDiv.innerHTML = "";
+
+  if (q.type === "qcm") {
+    q.choices.forEach((choice, i) => {
+      const div = document.createElement("div");
+      div.className = "choice";
+      div.textContent = choice.value;
+      div.onclick = () => submitAnswer(i);
+      choicesDiv.appendChild(div);
+    });
+  } else if (q.type === "multiple") {
+    q.choices.forEach((choice, i) => {
+      const label = document.createElement("label");
+      label.className = "choice";
+      label.innerHTML = `<input type="checkbox" value="${i}"> ${choice.value}`;
+      choicesDiv.appendChild(label);
+    });
+    document.getElementById("validateBtn").style.display = "inline-block";
+  } else if (q.type === "input") {
+    choicesDiv.innerHTML = `<input type="text" id="free-answer" placeholder="Ta réponse"> 
+                            <button onclick="submitAnswer()">Valider</button>`;
+  }
 
   timer = 0;
   interval = setInterval(() => {
     timer += 0.1;
     document.getElementById("timer").textContent = timer.toFixed(2);
   }, 100);
-}
-
-function revealChoices() {
-  const q = questions[current];
-  const choicesDiv = document.getElementById("choices");
-  choicesDiv.innerHTML = "";
-
-  if (q.type === "qcm" || q.type === "multiple") {
-    q.choices.forEach((choice, index) => {
-      const div = document.createElement("div");
-      div.className = "choice";
-      div.onclick = () => submitAnswer(index);
-      div.innerHTML = choice.type === "text" ? choice.value : `<img src="${choice.src}" alt="Réponse image" style="max-height:100px">`;
-      choicesDiv.appendChild(div);
-    });
-  } else if (q.type === "input") {
-    const input = document.createElement("input");
-    input.type = "text";
-    input.id = "free-answer";
-    input.placeholder = "Ta réponse";
-    choicesDiv.appendChild(input);
-
-    const btn = document.createElement("button");
-    btn.textContent = "Valider";
-    btn.onclick = () => submitAnswer(null);
-    choicesDiv.appendChild(btn);
-  }
-
-  choicesDiv.style.display = "block";
-  document.getElementById("revealBtn").style.display = "none";
   MathJax.typeset();
 }
 
-function submitAnswer(selectedIndex) {
+function submitAnswer(selectedIndex = null) {
   clearInterval(interval);
   const q = questions[current];
-  let correct = false;
+  const feedback = document.getElementById("feedback");
   let userResponse = "";
+  let correct = false;
   let correctAnswer = "";
 
   if (q.type === "qcm") {
-    userResponse = q.choices[selectedIndex].type === "text" ? q.choices[selectedIndex].value : q.choices[selectedIndex].src;
-    correctAnswer = q.answers.map(i => q.choices[i].type === "text" ? q.choices[i].value : q.choices[i].src).join(", ");
+    userResponse = q.choices[selectedIndex].value;
     correct = q.answers.includes(selectedIndex);
+    correctAnswer = q.answers.map(i => q.choices[i].value).join(", ");
   } else if (q.type === "multiple") {
-    userResponse = "(choix multiples non traités ici)";
-    correctAnswer = "(à venir)";
+    const selected = Array.from(document.querySelectorAll("#choices input:checked")).map(cb => parseInt(cb.value));
+    correct = selected.length === q.answers.length && selected.every(i => q.answers.includes(i));
+    document.querySelectorAll("#choices input").forEach((cb, i) => {
+      const parent = cb.parentElement;
+      if (cb.checked && q.answers.includes(i)) {
+        parent.classList.add("correct-choice");
+      } else if (cb.checked && !q.answers.includes(i)) {
+        parent.classList.add("incorrect-choice");
+      }
+    });
+    userResponse = selected.map(i => q.choices[i].value).join(", ");
+    correctAnswer = q.answers.map(i => q.choices[i].value).join(", ");
   } else if (q.type === "input") {
-    const input = document.getElementById("free-answer");
-    userResponse = input.value.trim();
+    const val = document.getElementById("free-answer").value.trim();
+    userResponse = val;
+    correct = val.replace(/\s/g, '') === q.answer.replace(/\s/g, '');
     correctAnswer = q.answer;
-    correct = userResponse.replace(/\s/g, '') === q.answer.replace(/\s/g, '');
   }
+
+  feedback.textContent = correct ? "Correct" : "Faux";
+  feedback.className = "feedback " + (correct ? "correct" : "incorrect");
+  document.getElementById("nextBtn").style.display = "inline-block";
+  document.getElementById("validateBtn").style.display = "none";
 
   results.push({
     expression: q.question,
@@ -216,6 +234,9 @@ function submitAnswer(selectedIndex) {
   });
 
   updateScore();
+}
+
+function nextQuestion() {
   current++;
   if (current < questions.length) {
     startQuestion();
@@ -236,7 +257,6 @@ function showResults() {
 
   const totalCorrect = results.filter(r => r.correct).length;
   const totalTime = globalTime.toFixed(1);
-
   document.getElementById("resultMessage").textContent =
     `Bravo !!! Tu as répondu correctement à ${totalCorrect} questions sur ${results.length} en ${totalTime} secondes.`;
 
@@ -245,19 +265,14 @@ function showResults() {
     const row = document.createElement("tr");
     row.className = r.correct ? "correct" : "incorrect";
 
-    const tdExpr = document.createElement("td");
-    tdExpr.innerHTML = r.expression;
-    const tdUser = document.createElement("td");
-    tdUser.innerHTML = r.userAnswer;
-    const tdCorrect = document.createElement("td");
-    tdCorrect.innerHTML = r.correctAnswer;
-    const tdTime = document.createElement("td");
-    tdTime.textContent = r.time + "s";
-
-    row.append(tdExpr, tdUser, tdCorrect, tdTime);
+    row.innerHTML = `
+      <td>${r.expression}</td>
+      <td>${r.userAnswer}</td>
+      <td>${r.correctAnswer}</td>
+      <td>${r.time}s</td>
+    `;
     tbody.appendChild(row);
   });
-  MathJax.typeset();
 }
 </script>
 
