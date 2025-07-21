@@ -181,6 +181,10 @@ function startQuestion() {
   }
 
   timer = 0;
+  globalInterval = setInterval(() => {
+  globalTime += 0.1;
+  document.getElementById("globalTime").textContent = globalTime.toFixed(1);
+}, 100);
   interval = setInterval(() => {
     timer += 0.1;
     document.getElementById("timer").textContent = timer.toFixed(2);
@@ -190,6 +194,7 @@ function startQuestion() {
 
 function submitAnswer(selectedIndex = null) {
   clearInterval(interval);
+  clearInterval(globalInterval);
   const q = questions[current];
   const feedback = document.getElementById("feedback");
   let userResponse = "";
