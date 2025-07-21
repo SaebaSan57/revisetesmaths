@@ -122,7 +122,7 @@ let globalInterval;
 fetch("2nd_degres_part1.json")
   .then(res => res.json())
   .then(data => {
-    questions = data;
+    questions = data.sort(() => 0.5 - Math.random()).slice(0, 20);
     launchCountdown();
   });
 
