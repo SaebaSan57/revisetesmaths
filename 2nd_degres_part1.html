@@ -90,6 +90,7 @@
   <button id="validateBtn" style="display:none;" onclick="submitAnswer()">Valider mes réponses</button>
   <div>Temps : <span id="timer">0.00</span> sec</div>
   <div id="feedback" class="feedback"></div>
+  <div id="explanationBox" style="display:none; margin-top: 15px; border: 1px solid #ccc; padding: 10px; font-style: italic;"></div>
   <button id="nextBtn" style="display:none;" onclick="nextQuestion()">Passer à la question suivante</button>
   <div id="score"></div>
 </div>
@@ -151,6 +152,8 @@ function startQuestion() {
   document.getElementById("feedback").textContent = "";
   document.getElementById("nextBtn").style.display = "none";
   document.getElementById("validateBtn").style.display = "none";
+  document.getElementById("explanationBox").style.display = "none";
+  document.getElementById("explanationBox").innerHTML = "";
 
   let questionHTML = q.question_img ? `<img src="${q.question_img}" alt="Question" style="max-width:90%;"><br>` : "";
   questionHTML += `<p>${q.question}</p>`;
@@ -228,6 +231,13 @@ function submitAnswer(selectedIndex = null) {
   feedback.textContent = correct ? "Correct" : "Faux";
   feedback.className = "feedback " + (correct ? "correct" : "incorrect");
   document.getElementById("nextBtn").style.display = "inline-block";
+  const explanationBox = document.getElementById("explanationBox");
+  if (q.explanation) {
+    explanationBox.innerHTML = q.explanation;
+    explanationBox.style.display = "block";
+  } else {
+    explanationBox.style.display = "none";
+  }
   document.getElementById("validateBtn").style.display = "none";
 
   results.push({
