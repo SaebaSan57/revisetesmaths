@@ -1,0 +1,222 @@
+[
+    {
+        "type": "grammar",
+        "number": 1,
+        "text": "She finished in less time __________ I did.",
+        "options": ["that", "as", "than", "then"],
+        "correct": 2
+    },
+    {
+        "type": "grammar",
+        "number": 2,
+        "text": "Which mountain is the __________ in Africa?",
+        "options": ["high", "higher", "more high", "highest"],
+        "correct": 3
+    },
+    {
+        "type": "grammar",
+        "number": 3,
+        "text": "You shouldn't leave your laptop on your desk. Someone __________ steal it.",
+        "options": ["must", "should", "might", "No correct answer"],
+        "correct": 2
+    },
+    {
+        "type": "grammar",
+        "number": 4,
+        "text": "The best way of avoiding malaria is to avoid being __________ by a mosquito.",
+        "options": ["bitten", "bited", "biting", "No correct answer"],
+        "correct": 0
+    },
+    {
+        "type": "grammar",
+        "number": 5,
+        "text": "I think I have __________ the terms of the contract.",
+        "options": ["understand", "understanding", "understands", "understood"],
+        "correct": 3
+    },
+    {
+        "type": "grammar",
+        "number": 6,
+        "text": "When we arrived at the hotel, we discovered that the manager __________ the wrong room for us.",
+        "options": ["has reserved", "had reserved", "was reserved", "reserving"],
+        "correct": 1
+    },
+    {
+        "type": "grammar",
+        "number": 7,
+        "text": "I don't know this word. What __________?",
+        "options": ["it means", "means it", "does it mean", "it does mean"],
+        "correct": 2
+    },
+    {
+        "type": "grammar",
+        "number": 8,
+        "text": "There was a robbery at the bank yesterday. Do you know how much money __________?",
+        "options": ["was stealing", "is stealing", "was stolen", "has stolen"],
+        "correct": 2
+    },
+    {
+        "type": "grammar",
+        "number": 9,
+        "text": "It's a very modern city. There aren't __________ old buildings.",
+        "options": ["much", "many", "a lot", "No correct answer"],
+        "correct": 1
+    },
+    {
+        "type": "grammar",
+        "number": 10,
+        "text": "I didn't see you. If I had seen you, I __________ hello.",
+        "options": ["will say", "would say", "would have said", "will have said"],
+        "correct": 2
+    },
+    {
+        "type": "vocabulary",
+        "number": 11,
+        "text": "This exit should only be used in case of an __________.",
+        "options": ["urgency", "emergency", "urgently", "No correct answer"],
+        "correct": 1
+    },
+    {
+        "type": "vocabulary",
+        "number": 12,
+        "text": "Who's going to __________ the children while you're away?",
+        "options": ["take care", "guard", "look forward to", "No correct answer"],
+        "correct": 3
+    },
+    {
+        "type": "vocabulary",
+        "number": 13,
+        "text": "They finished their meal and asked the server for the __________.",
+        "options": ["note", "addition", "ticket", "No correct answer"],
+        "correct": 3
+    },
+    {
+        "type": "vocabulary",
+        "number": 14,
+        "text": "His __________ for a new high-speed railway was rejected.",
+        "options": ["proposing", "proposal", "propose", "proposed"],
+        "correct": 1
+    },
+    {
+        "type": "vocabulary",
+        "number": 15,
+        "text": "After a long delay, the flight __________ left six hours late.",
+        "options": ["eventually", "currently", "lately", "lastly"],
+        "correct": 0
+    },
+    {
+        "type": "vocabulary",
+        "number": 16,
+        "text": "The government must __________ the problem of high unemployment.",
+        "options": ["break up", "deal with", "turn off", "No correct answer"],
+        "correct": 1
+    },
+    {
+        "type": "vocabulary",
+        "number": 17,
+        "text": "We employ an expert to __________ on new technologies.",
+        "options": ["advice", "advisor", "advise", "advisory"],
+        "correct": 2
+    },
+    {
+        "type": "vocabulary",
+        "number": 18,
+        "text": "The __________ for submitting university applications is this Friday.",
+        "options": ["deadline", "streamline", "outline", "skyline"],
+        "correct": 0
+    },
+    {
+        "type": "vocabulary",
+        "number": 19,
+        "text": "Sorry I'm late, but I was __________ by the traffic.",
+        "options": ["withdrawn", "crowded", "held up", "delay"],
+        "correct": 2
+    },
+    {
+        "type": "vocabulary",
+        "number": 20,
+        "text": "Public education was one of the biggest __________ in the party's election campaign.",
+        "options": ["situations", "issues", "hardships", "No correct answer"],
+        "correct": 1
+    },
+    {
+        "type": "reading",
+        "number": 21,
+        "passage": "Sam McKnight is one of the most famous hairdressers in the world. His clients have included Princess Diana, Kate Moss and Madonna. So when he tells you to wash your hair in bottled water, you wash your hair in bottled water.",
+        "text": "What best describes the tone of the text above?",
+        "options": ["critical", "informal", "cheerful", "sterile"],
+        "correct": 1
+    },
+    {
+        "type": "reading",
+        "number": 22,
+        "passage": "Here is a quick look at what British wild mushrooms are like - and which are to be avoided. If you're planning to pick wild mushrooms, you must invest in a field guide and ideally get some personal tuition. These descriptions are intended for the casual spotter. Colours in particular may vary.",
+        "text": "The author of this believes readers _________________ picking and eating their own mushrooms.",
+        "options": ["can immediately begin", "should be cautious before", "are already knowledgeable about", "will get lost while"],
+        "correct": 1
+    },
+    {
+        "type": "reading",
+        "number": 23,
+        "passage": "Humans give off a fragrant cocktail of body odour, heat and carbon dioxide, which varies from person to person and mosquitoes use to locate their next meal. While most animals have a specific set of neurons that detect each type of odour, mosquitoes can pick up on smells via several different pathways, suggests the study, which is published in the science journal Cell.",
+        "text": "Which of the following is closest in meaning to \"several different pathways\" used in the text above?",
+        "options": ["diverse tracks", "many similar trails", "various methods", "specific distinct runways"],
+        "correct": 2
+    },
+    {
+        "type": "reading",
+        "number": 24,
+        "passage": "A group of men dressed in 19th-century costume enter the village square. They have puffy white shirtsleeves, embroidered vests and leather britches, they have brightly coloured flowers bedecking their hats. They are here to chase away winter, but they are not alone.",
+        "text": "What best describes the tone of the text above?",
+        "options": ["critical", "informal", "cheerful", "sterile"],
+        "correct": 2
+    },
+    {
+        "type": "reading",
+        "number": 25,
+        "passage": "Spot it: Cyberbullying can cause kids to avoid using their phone or computer, or appear stressed when receiving an e-mail or text. They may act reluctant to attend social or school events or avoid conversations about school or friends. In extreme cases, the child will have declining grades, stop eating or have difficulty sleeping.",
+        "text": "Which of the following is NOT cited as a sign of cyberbullying?",
+        "options": ["poor grades", "mood swings", "reluctance to use a computer", "sleep trouble"],
+        "correct": 1
+    },
+    {
+        "type": "reading",
+        "number": 26,
+        "passage": "Whistling used to be commonplace, a useful thing to do while walking or washing the car. It was a pastime particularly favoured by dads. But nobody seems to do it these days. \"The world tends to be a lot more hustle-bustle,\" says whistling virtuoso Robert Stemmons, who specialises in two-note harmony, warbling, trilling and an array of realistic bird calls. He also offers whistling lessons over the phone. \"Whistling is one of the simple things being left by the wayside,\" he says.",
+        "text": "Which of the following words best describes the tone of the text above?",
+        "options": ["Wistful", "Whistleful", "Whistful", "Whistfoul"],
+        "correct": 0
+    },
+    {
+        "type": "reading",
+        "number": 27,
+        "passage": "Politics is the name of the game and, with a federal election looming and many state elections around the country to follow, it is here that we must strike. It is essential that First Nations people have a seat at the table and that we stand together to protect our country, our home. In some cases, we'll need to just build our own tables.",
+        "text": "Which of the following most closely matches the meaning of \"looming\" as used in the text?",
+        "options": ["producing fabric", "threatening", "in the distant future", "losing"],
+        "correct": 1
+    },
+    {
+        "type": "reading",
+        "number": 28,
+        "passage": "The phrase \"they come in all shapes and sizes\" could have been coined just for the Coleoptera — the beetles. At a fragile 0.325mm long, the Colombian featherwing (Scydosella musawasensis) has a good claim to being one of the smallest free-living insects in the world, and is tinier than many single-celled creatures. At the other end of the spectrum, the obviously named titan beetle, a huge Brazilian longhorn that can snap a pencil in its jaws, reaches 167mm – about 500 times the size.",
+        "text": "Which of the following is the author's purpose in the paragraph above.",
+        "options": ["to impress readers with his knowledge", "to emphasize the variety of beetles in the world", "to spark readers' imaginations", "to educate readers about an old saying"],
+        "correct": 1
+    },
+    {
+        "type": "reading",
+        "number": 29,
+        "passage": "One of the most bandied-about statistics regarding flavour perception is that it is 80% governed by smell. This often surprises people when they first hear it from a local know-it-all, as it really feels as if flavour is coming from our mouths, where the food or drink is. All becomes clear, however, when you try eating while holding your nose. Try it. I just ate a strawberry with my nostrils pinched and it was like water, with none of that blush sweetness. In fact, it's common when people first lose their ability to smell for them to think they have lost the use of their taste buds.",
+        "text": "Which of the following best describes the tone of the article above?",
+        "options": ["scholarly", "solemn", "relaxed", "joking"],
+        "correct": 2
+    },
+    {
+        "type": "reading",
+        "number": 30,
+        "passage": "Italy is to apply for Unesco status for espresso coffee, claiming it is \"much more than a simple drink\". It follows the art of the Neapolitan pizza-maker being added to the UN agency's list of the world's intangible heritage in 2017 as Italy aims to secure the worldwide status for another of its successful symbols. \"It is an authentic ritual ___ and an expression of our sociality that distinguishes us around the world,\" said Gian Marco Centinaio, the agriculture undersecretary, confirming that the application had been submitted.",
+        "text": "Select the appropriate punctuation from the list below that should be inserted in the text above.",
+        "options": ["a comma ( , )", "a period ( . )", "a semi-colon ( ; )", "no punctuation should be used"],
+        "correct": 3
+    }
+]
