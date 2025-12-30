@@ -1,0 +1,222 @@
+[
+    {
+        "number": 21,
+        "text": "Soit $f : x \\mapsto (e^x + x)^5$. Alors, pour tout $x \\in \\mathbb{R}$, $f'(x)$ est égale à",
+        "options": [
+            { "id": "a", "text": "$5(e^x + x)^4$", "correct": false },
+            { "id": "b", "text": "$5(e^x + 1)^4$", "correct": false },
+            { "id": "c", "text": "$5(e^x + x)^4(e^x + 1)$", "correct": true },
+            { "id": "d", "text": "$5(\\ln(x) + 1)^4$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 22,
+        "text": "Une primitive de $x \\mapsto \\dfrac{1}{\\ln(x)}$ sur $]1, +\\infty[$ est",
+        "options": [
+            { "id": "a", "text": "$x \\mapsto \\ln(\\ln(x))$", "correct": false },
+            { "id": "b", "text": "$x \\mapsto \\dfrac{1}{2}\\ln^2(x)$", "correct": false },
+            { "id": "c", "text": "$x \\mapsto \\dfrac{x}{\\ln(x)}$", "correct": false },
+            { "id": "d", "text": "$x \\mapsto \\dfrac{\\ln(x)}{x}$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": true }
+        ]
+    },
+    {
+        "number": 23,
+        "text": "Soit $f : x \\mapsto \\ln(-x^2 + x - 2)$. Alors le domaine de définition de $f$ est",
+        "options": [
+            { "id": "a", "text": "$[-1, 2]$", "correct": false },
+            { "id": "b", "text": "$\\mathbb{R}^*_+$", "correct": false },
+            { "id": "c", "text": "$]-\\infty, -1] \\cup [2, +\\infty[$", "correct": false },
+            { "id": "d", "text": "$\\varnothing$", "correct": true },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 24,
+        "text": "Le nombre de façons de ranger $3$ objets distincts dans $5$ tiroirs sachant qu'un tiroir ne peut contenir qu'un seul objet est",
+        "options": [
+            { "id": "a", "text": "$15$", "correct": false },
+            { "id": "b", "text": "$60$", "correct": true },
+            { "id": "c", "text": "$120$", "correct": false },
+            { "id": "d", "text": "$125$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 25,
+        "text": "Soit $(u_n)$ une suite géométrique de raison $q \\neq 1$. Alors $u_1 + u_2 + \\cdots + u_n$ est égale à",
+        "options": [
+            { "id": "a", "text": "$u_1\\dfrac{1 - q^{n-1}}{1 - q}$", "correct": false },
+            { "id": "b", "text": "$u_1\\dfrac{1 - q^{n-2}}{1 - q}$", "correct": false },
+            { "id": "c", "text": "$u_1\\dfrac{1 - q^{n-3}}{1 - q}$", "correct": false },
+            { "id": "d", "text": "$u_1\\dfrac{1 - q^n}{1 - q}$", "correct": true },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 26,
+        "text": "Dans un repère orthonormé de l'espace, on considère les points $A(1, -1, 2)$ et $B(2, 1, -1)$. Alors une représentation paramétrique de la droite $(AB)$ est",
+        "options": [
+            { "id": "a", "text": "$x = 1 + 2t$, $y = -1 + t$, $z = 2 - t$ ; $t \\in \\mathbb{R}$", "correct": false },
+            { "id": "b", "text": "$x = 1 + t$, $y = -1 + 2t$, $z = 2 - 3t$ ; $t \\in \\mathbb{R}$", "correct": true },
+            { "id": "c", "text": "$x = 1 + t$, $y = 2 - t$, $z = -3 + 2t$ ; $t \\in \\mathbb{R}$", "correct": false },
+            { "id": "d", "text": "$x = 3 + t$, $y = -t$, $z = 1 + 2t$ ; $t \\in \\mathbb{R}$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 27,
+        "text": "Soient $A$ et $B$ deux événements indépendants quelconques. Alors",
+        "options": [
+            { "id": "a", "text": "$P(A \\cup B) = P(A) + P(B)$", "correct": false },
+            { "id": "b", "text": "$P(A \\cup B) = P(A)P(B)$", "correct": false },
+            { "id": "c", "text": "$P(A \\cap B) = P(A) + P(B)$", "correct": false },
+            { "id": "d", "text": "$P(A \\cap B) = P(A)P(B)$", "correct": true },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 28,
+        "text": "Soit $f : x \\mapsto \\sin(x)\\cos(x)$. Alors une primitive de $f$ sur $\\mathbb{R}$ est",
+        "options": [
+            { "id": "a", "text": "$x \\mapsto \\dfrac{1}{2}\\cos^2(x)$", "correct": false },
+            { "id": "b", "text": "$x \\mapsto \\dfrac{1}{2}\\sin^2(x)$", "correct": true },
+            { "id": "c", "text": "$x \\mapsto -\\cos(\\sin(x))$", "correct": false },
+            { "id": "d", "text": "$x \\mapsto -\\dfrac{1}{2}\\sin^2(x)$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 29,
+        "text": "$\\displaystyle\\lim_{x \\to -\\infty} 2xe^{-x}$ est égale à",
+        "options": [
+            { "id": "a", "text": "$-\\infty$", "correct": true },
+            { "id": "b", "text": "$+\\infty$", "correct": false },
+            { "id": "c", "text": "$0$", "correct": false },
+            { "id": "d", "text": "$1$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 30,
+        "text": "Soient $A$ et $B$ deux événements incompatibles quelconques. Alors",
+        "options": [
+            { "id": "a", "text": "$P(A \\cup B) = P(A)P(B)$", "correct": false },
+            { "id": "b", "text": "$P(A \\cup B) = P(A) + P(B)$", "correct": true },
+            { "id": "c", "text": "$P(A \\cap B) = P(A) + P(B)$", "correct": false },
+            { "id": "d", "text": "$P(A \\cap B) = P(A)P(B)$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 31,
+        "text": "Soit $(u_n)$ définie pour tout $n \\in \\mathbb{N}$ par $u_n = \\displaystyle\\sum_{k=0}^{n}\\left(\\dfrac{1}{2}\\right)^k$. Alors la limite de $(u_n)$ lorsque $n$ tend vers l'infini est",
+        "options": [
+            { "id": "a", "text": "$0$", "correct": false },
+            { "id": "b", "text": "$1$", "correct": false },
+            { "id": "c", "text": "$2$", "correct": true },
+            { "id": "d", "text": "$+\\infty$", "correct": false },
+            { "id": "e", "text": "$\\dfrac{1}{2}$", "correct": false }
+        ]
+    },
+    {
+        "number": 32,
+        "text": "Soit $f : x \\mapsto \\sqrt{\\ln(x)}$. Alors, pour tout $x \\in ]1, +\\infty[$, $f'(x)$ est égale à",
+        "options": [
+            { "id": "a", "text": "$\\dfrac{1}{2\\sqrt{1/x}}$", "correct": false },
+            { "id": "b", "text": "$\\dfrac{1}{2\\sqrt{\\ln(x)}}$", "correct": false },
+            { "id": "c", "text": "$\\dfrac{1}{2x\\sqrt{\\ln(x)}}$", "correct": true },
+            { "id": "d", "text": "$\\dfrac{1}{2\\sqrt{\\ln(x)}}$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 33,
+        "text": "Soit $f : x \\mapsto \\dfrac{\\ln(1 - x)}{\\ln(2 - x)}$. Alors le domaine de définition de $f$ est",
+        "options": [
+            { "id": "a", "text": "$]1, +\\infty[$", "correct": false },
+            { "id": "b", "text": "$]2, +\\infty[$", "correct": false },
+            { "id": "c", "text": "$]-\\infty, 2[$", "correct": false },
+            { "id": "d", "text": "$]-\\infty, 1[$", "correct": true },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 34,
+        "text": "Soit $(u_n)$ une suite réelle convergeant vers $-1$. Alors",
+        "options": [
+            { "id": "a", "text": "$u_n - 1 \\xrightarrow[n \\to +\\infty]{} 0$", "correct": false },
+            { "id": "b", "text": "$|u_n - 1| \\xrightarrow[n \\to +\\infty]{} 0$", "correct": false },
+            { "id": "c", "text": "$|u_n| \\xrightarrow[n \\to +\\infty]{} 1$", "correct": true },
+            { "id": "d", "text": "$(u_n)$ est bornée", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 35,
+        "text": "Soit $X$ une variable aléatoire suivant une loi binomiale de paramètres $(n, p)$. Alors",
+        "options": [
+            { "id": "a", "text": "$E(X) = np$", "correct": true },
+            { "id": "b", "text": "$E(X) = \\dfrac{n}{p}$", "correct": false },
+            { "id": "c", "text": "$V(X) = n(1 - p)$", "correct": false },
+            { "id": "d", "text": "$V(X) = np(1 - p)$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 36,
+        "text": "Parmi les fonctions suivantes, laquelle est une solution de l'équation différentielle $y' - y = x - 3$ :",
+        "options": [
+            { "id": "a", "text": "$x \\mapsto e^x + x - 3$", "correct": false },
+            { "id": "b", "text": "$x \\mapsto x - 3$", "correct": false },
+            { "id": "c", "text": "$x \\mapsto 2 - x$", "correct": true },
+            { "id": "d", "text": "$x \\mapsto e^x$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 37,
+        "text": "Soit $(u_n)$ définie par $u_0 = 1$ et pour tout $n \\in \\mathbb{N}$, $u_{n+1} = 2u_n + 3$. Alors la suite $(v_n)$ définie pour tout $n \\in \\mathbb{N}$ par $v_n = u_n - \\ell$ est géométrique de raison $2$ si",
+        "options": [
+            { "id": "a", "text": "$\\ell = 1$", "correct": false },
+            { "id": "b", "text": "$\\ell = -3$", "correct": true },
+            { "id": "c", "text": "$\\ell = 2$", "correct": false },
+            { "id": "d", "text": "$\\ell = 3$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 38,
+        "text": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = -4x^3 + 6x^2 + 8$. La primitive de $f$ sur $\\mathbb{R}$ qui vaut $2$ en $0$ est",
+        "options": [
+            { "id": "a", "text": "$-16x^4 + 18x^3 + 8x + 1$", "correct": false },
+            { "id": "b", "text": "$-x^4 + 2x^3 + 8x + 10$", "correct": false },
+            { "id": "c", "text": "$-x^4 + 2x^3 + 8x + 2$", "correct": true },
+            { "id": "d", "text": "$-x^4 + 2x^3 + 8x$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 39,
+        "text": "Dans un repère orthonormé de l'espace, on considère la droite $d$ de vecteur directeur $\\vec{u}(1, -1, 3)$ passant par $A(2, 1, 0)$ et la droite $d'$ de vecteur directeur $\\vec{v}(-2, -2, -1)$ passant par $B(1, -2, 2)$. Alors $d$ et $d'$ sont sécantes de point d'intersection",
+        "options": [
+            { "id": "a", "text": "$M(1, -1, 2)$", "correct": false },
+            { "id": "b", "text": "$M(1, 1, -2)$", "correct": false },
+            { "id": "c", "text": "$M(3, 0, 3)$", "correct": true },
+            { "id": "d", "text": "$M(2, 1, -3)$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": false }
+        ]
+    },
+    {
+        "number": 40,
+        "text": "Soit $f : x \\mapsto \\sqrt{1 - \\ln(x)}$. Alors le domaine de définition de $f$ est",
+        "options": [
+            { "id": "a", "text": "$\\mathbb{R}^*_+$", "correct": false },
+            { "id": "b", "text": "$]e, +\\infty[$", "correct": false },
+            { "id": "c", "text": "$]1, +\\infty[$", "correct": false },
+            { "id": "d", "text": "$]-\\infty, e]$", "correct": false },
+            { "id": "e", "text": "rien de ce qui précède", "correct": true }
+        ]
+    }
+]

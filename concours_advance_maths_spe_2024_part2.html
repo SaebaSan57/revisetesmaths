@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concours Advance - Maths Spé 2024 - Partie 2</title>
+
+    <!-- MathJax pour le rendu des formules mathématiques -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        .progress-container {
+            background: #f0f0f0;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .progress-bar-container {
+            flex: 1;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin: 0 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-weight: bold;
+            color: #764ba2;
+        }
+
+        .countdown {
+            text-align: center;
+            padding: 100px 40px;
+            font-size: 3em;
+            color: #667eea;
+            font-weight: bold;
+            display: none;
+        }
+
+        .countdown.active {
+            display: block;
+        }
+
+        .question-container {
+            padding: 40px;
+            display: none;
+        }
+
+        .question-container.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .question-header {
+            margin-bottom: 30px;
+        }
+
+        .question-number {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 1.3em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .options {
+            margin: 30px 0;
+        }
+
+        .option {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover {
+            background: #f0f0ff;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            background: #f0f0ff;
+            border-color: #667eea;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .option-label {
+            flex: 1;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .option-id {
+            font-weight: bold;
+            color: #764ba2;
+            margin-right: 10px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 40px;
+            background: #f8f9fa;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .results-container {
+            display: none;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .results-container.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .score {
+            font-size: 4em;
+            color: #667eea;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .score-text {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .answer-review {
+            text-align: left;
+            margin-top: 40px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .answer-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #e0e0e0;
+        }
+
+        .answer-item.correct {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+
+        .answer-item.incorrect {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .timer {
+            font-size: 1.2em;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .question-text {
+                font-size: 1.1em;
+            }
+
+            .score {
+                font-size: 2.5em;
+            }
+
+            .back-link {
+                position: relative;
+                display: block;
+                margin-bottom: 10px;
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-link">← Retour au menu</a>
+            <h1>Concours Advance - Maths Spé 2024</h1>
+            <p>Partie 2 - Questions 21 à 40 | Spécialité Mathématiques</p>
+        </div>
+
+        <div class="progress-container">
+            <span class="progress-text">Question <span id="current-question">1</span> / <span id="total-questions">20</span></span>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span class="progress-text"><span id="progress-percent">0</span>%</span>
+            <span class="timer" id="timer">Temps: 0s</span>
+        </div>
+
+        <div class="countdown" id="countdown">
+            Le test commence dans <span id="countdown-number">5</span>...
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="results-container" id="results">
+            <h2>Test Terminé!</h2>
+            <div class="score" id="final-score">0/20</div>
+            <p class="score-text">Votre score: <span id="percentage">0</span>%</p>
+            <p class="score-text">Temps total: <span id="total-time">0</span> secondes</p>
+            <button class="btn-primary" onclick="restartQuiz()">Recommencer le test</button>
+            <button class="btn-secondary" onclick="window.location.href='index.html'">Retour au menu</button>
+            <div class="answer-review" id="answer-review"></div>
+        </div>
+
+        <div class="navigation">
+            <button class="btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>← Précédent</button>
+            <button class="btn-primary" id="next-btn" onclick="nextQuestion()">Suivant →</button>
+            <button class="btn-success" id="submit-btn" onclick="submitQuiz()" style="display: none;">Terminer le test</button>
+        </div>
+    </div>
+
+    <script>
+        let questions = [];
+        let currentQuestion = 0;
+        let answers = [];
+        let startTime;
+        let questionStartTime;
+        let questionTimes = [];
+        let timerInterval;
+        let username = localStorage.getItem('username') || 'Anonyme';
+
+        // Load questions from JSON file
+        async function loadQuestions() {
+            try {
+                const response = await fetch('concours_advance_maths_spe_2024_part2.json');
+                questions = await response.json();
+                answers = new Array(questions.length).fill(null).map(() => []);
+                questionTimes = new Array(questions.length).fill(0);
+                initQuiz();
+            } catch (error) {
+                console.error('Erreur lors du chargement des questions:', error);
+                alert('Erreur lors du chargement du questionnaire. Veuillez réactualiser la page.');
+            }
+        }
+
+        function startCountdown() {
+            let count = 5;
+            document.getElementById('countdown').classList.add('active');
+            document.getElementById('countdown-number').textContent = count;
+
+            const countdownInterval = setInterval(() => {
+                count--;
+                if (count > 0) {
+                    document.getElementById('countdown-number').textContent = count;
+                } else {
+                    clearInterval(countdownInterval);
+                    document.getElementById('countdown').classList.remove('active');
+                    startQuiz();
+                }
+            }, 1000);
+        }
+
+        function startQuiz() {
+            startTime = Date.now();
+            questionStartTime = Date.now();
+            startTimer();
+            showQuestion(0);
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                document.getElementById('timer').textContent = `Temps: ${elapsed}s`;
+            }, 1000);
+        }
+
+        function initQuiz() {
+            const container = document.getElementById('quiz-container');
+            document.getElementById('total-questions').textContent = questions.length;
+
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-container';
+                questionDiv.id = `question-${index}`;
+
+                let html = `
+                    <div class="question-header">
+                        <div class="question-number">Question ${q.number} sur 40</div>
+                        <div class="question-text">${q.text}</div>
+                    </div>
+                    <div class="options">
+                `;
+
+                q.options.forEach((option) => {
+                    html += `
+                        <div class="option" onclick="selectOption(${index}, '${option.id}')">
+                            <input type="checkbox" id="q${index}_${option.id}" value="${option.id}"
+                                onchange="selectOption(${index}, '${option.id}')">
+                            <label class="option-label" for="q${index}_${option.id}">
+                                <span class="option-id">${option.id}.</span>
+                                ${option.text}
+                            </label>
+                        </div>
+                    `;
+                });
+
+                html += `</div>`;
+                questionDiv.innerHTML = html;
+                container.appendChild(questionDiv);
+            });
+
+            // Render MathJax formulas
+            if (window.MathJax) {
+                MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+            }
+
+            startCountdown();
+        }
+
+        function showQuestion(index) {
+            // Save time spent on previous question
+            if (currentQuestion !== index && questionStartTime) {
+                const timeSpent = (Date.now() - questionStartTime) / 1000;
+                questionTimes[currentQuestion] = (questionTimes[currentQuestion] || 0) + timeSpent;
+            }
+
+            document.querySelectorAll('.question-container').forEach(q => q.classList.remove('active'));
+            document.getElementById(`question-${index}`).classList.add('active');
+
+            currentQuestion = index;
+            questionStartTime = Date.now();
+            document.getElementById('current-question').textContent = index + 1;
+
+            const progress = ((index + 1) / questions.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('progress-percent').textContent = Math.round(progress);
+
+            document.getElementById('prev-btn').disabled = index === 0;
+
+            if (index === questions.length - 1) {
+                document.getElementById('next-btn').style.display = 'none';
+                document.getElementById('submit-btn').style.display = 'block';
+            } else {
+                document.getElementById('next-btn').style.display = 'block';
+                document.getElementById('submit-btn').style.display = 'none';
+            }
+
+            // Restore selections if exist
+            if (answers[index] && answers[index].length > 0) {
+                answers[index].forEach(optId => {
+                    const checkbox = document.getElementById(`q${index}_${optId}`);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        checkbox.parentElement.classList.add('selected');
+                    }
+                });
+            }
+        }
+
+        function selectOption(questionIndex, optionId) {
+            const checkbox = document.getElementById(`q${questionIndex}_${optionId}`);
+
+            if (checkbox.checked) {
+                if (!answers[questionIndex].includes(optionId)) {
+                    answers[questionIndex].push(optionId);
+                }
+                checkbox.parentElement.classList.add('selected');
+            } else {
+                answers[questionIndex] = answers[questionIndex].filter(id => id !== optionId);
+                checkbox.parentElement.classList.remove('selected');
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
+                showQuestion(currentQuestion + 1);
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                showQuestion(currentQuestion - 1);
+            }
+        }
+
+        async function submitQuiz() {
+            const unanswered = answers.filter(a => a.length === 0).length;
+            if (unanswered > 0) {
+                if (!confirm(`Vous avez ${unanswered} question(s) sans réponse. Voulez-vous vraiment terminer le test?`)) {
+                    return;
+                }
+            }
+
+            // Save time for last question
+            const timeSpent = (Date.now() - questionStartTime) / 1000;
+            questionTimes[currentQuestion] = (questionTimes[currentQuestion] || 0) + timeSpent;
+
+            clearInterval(timerInterval);
+
+            document.getElementById('quiz-container').style.display = 'none';
+            document.querySelector('.navigation').style.display = 'none';
+
+            let correctCount = 0;
+            let reviewHtml = '';
+            const totalTime = Math.floor((Date.now() - startTime) / 1000);
+
+            const results = [];
+
+            questions.forEach((q, index) => {
+                const correctAnswers = q.options.filter(opt => opt.correct).map(opt => opt.id);
+                const userAnswer = answers[index];
+
+                const isCorrect = correctAnswers.length === userAnswer.length &&
+                                correctAnswers.every(id => userAnswer.includes(id));
+
+                if (isCorrect) correctCount++;
+
+                const correctText = correctAnswers.map(id => {
+                    const opt = q.options.find(o => o.id === id);
+                    return `${id}. ${opt.text}`;
+                }).join(', ');
+
+                const userText = userAnswer.length > 0 ?
+                    userAnswer.map(id => {
+                        const opt = q.options.find(o => o.id === id);
+                        return `${id}. ${opt.text}`;
+                    }).join(', ') :
+                    'Aucune réponse';
+
+                results.push({
+                    question: `Q${q.number}: ${q.text}`,
+                    userAnswer: userText,
+                    correctAnswer: correctText,
+                    time: questionTimes[index].toFixed(2),
+                    correct: isCorrect
+                });
+
+                reviewHtml += `
+                    <div class="answer-item ${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong>Question ${q.number}:</strong> ${isCorrect ? '✓ Correct' : '✗ Incorrect'}<br>
+                        <small>${q.text}</small><br>
+                        <strong>Votre réponse:</strong> ${userText}<br>
+                        ${!isCorrect ? `<strong>Bonne réponse:</strong> ${correctText}<br>` : ''}
+                        <strong>Temps:</strong> ${questionTimes[index].toFixed(2)}s
+                    </div>
+                `;
+            });
+
+            const percentage = Math.round((correctCount / questions.length) * 100);
+
+            document.getElementById('final-score').textContent = `${correctCount}/${questions.length}`;
+            document.getElementById('percentage').textContent = percentage;
+            document.getElementById('total-time').textContent = totalTime;
+            document.getElementById('answer-review').innerHTML = reviewHtml;
+            document.getElementById('results').classList.add('active');
+
+            // Send results to backend
+            try {
+                await fetch('https://quiz-backend-4tz9.onrender.com/api/save-results', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        quizName: 'Concours Advance - Maths Spé 2024 - Partie 2',
+                        score: correctCount,
+                        total: questions.length,
+                        percentage: percentage,
+                        totalTime: totalTime,
+                        results: results
+                    })
+                });
+            } catch (error) {
+                console.error('Erreur lors de l\'envoi des résultats:', error);
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            answers = new Array(questions.length).fill(null).map(() => []);
+            questionTimes = new Array(questions.length).fill(0);
+
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+            });
+
+            document.getElementById('results').classList.remove('active');
+            document.getElementById('quiz-container').style.display = 'block';
+            document.querySelector('.navigation').style.display = 'flex';
+
+            startCountdown();
+        }
+
+        // Initialize quiz on page load
+        window.onload = loadQuestions;
+    </script>
+</body>
+</html>
