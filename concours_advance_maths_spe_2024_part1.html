@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concours Advance - Maths Spé 2024 - Partie 1</title>
+
+    <!-- MathJax pour le rendu des formules mathématiques -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -461,6 +474,11 @@
                 questionDiv.innerHTML = html;
                 container.appendChild(questionDiv);
             });
+
+            // Render MathJax formulas
+            if (window.MathJax) {
+                MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+            }
 
             startCountdown();
         }
